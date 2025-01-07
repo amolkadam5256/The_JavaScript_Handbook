@@ -13,3 +13,6 @@ scoret = Number("amol");
 console.log(`scoret is : ${scoret}`);
 console.log(typeof scoret );
 
+
+let myName = "amol kadam "
+console.log(`my name is :${myName}`)
