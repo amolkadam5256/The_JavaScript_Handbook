@@ -12,7 +12,7 @@ console.log(typeof anotherName); // Output: string
 let myObj = {
     myName: "Amol Kadam",
     age: 25,
-};
+};  
 
 console.log("myObj"); // Output: myObj (string)
 console.log(myObj); // Output: { myName: "Amol Kadam", age: 25 }
