@@ -137,3 +137,48 @@
     // Logs the result of the split function applied to the string
     console.log(`Split function in string: ${splitString.split(' ')}`); 
 }
+
+
+
+{
+    let nam =  "Amit kadam";
+    console.log(`thia is your name is : ${nam}  and name lenght is ${nam.length} character of ${nam[2]}`);
+}
+
+{
+    let nam =  "Amit kadam";
+    console.log(`charAt function is use for select character charAt(2) in string  ${nam.charAt(2)}`)
+}
+
+{
+ let name ="Amol Kadam";   
+ console.log(`hire is character convet in unicode using charcodeAt(3) ${name.charCodeAt(3)}`)
+}
+
+{
+    let concat1="cat";
+    let catcon2="dog";
+    console.log(`Concnation of two string in using string function : ${concat1.concat("!" ,catcon2)}`)
+}
+
+
+{
+    let substr1 = " Amol Tukaram Kadam";
+    console.log(`includes() method is check string substring is part of original string or not <br/> Check in your string  Amol is sub string is it there or not ${substr1.includes("Amol")}`);
+}
+
+{
+  let indexSearch= "Amol Tukaram Kadam";
+  console.log(`Check index of substring string index amol mol index is 1 mol( it proint start index of string )  ${indexSearch.indexOf("Tukaram")}`);
+}
+
+{
+    // it show last lastIndexOf latter or word  ex amol amol lastindexof(a)it return last a index number 
+    let str ="amol tukaram";
+    console.log(`Lastindex of substring is : ${str.lastIndexOf("m")}`)
+}
+
+{
+    let strmatch="match me this content ";
+    
+}

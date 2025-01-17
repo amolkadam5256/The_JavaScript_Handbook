@@ -33,4 +33,4 @@ let str = -2;
 let str2 = "1";
 let str3 = "1";
 
-console.log(`${str + str2 + str3}`)
+console.log(`${str + str2 + str3}`);
