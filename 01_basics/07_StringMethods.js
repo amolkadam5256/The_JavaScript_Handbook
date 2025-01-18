@@ -200,3 +200,9 @@
         `Chained result: ${str.trim().toUpperCase().replace("JAVASCRIPT", "JS")}`
     ); // Trims, converts to uppercase, and replaces part of the string
 }
+
+
+let array = ["amol", "amit", "ajit"];
+let [var1,, var3] = array;
+console.log(var1);
+console.log(var3);
