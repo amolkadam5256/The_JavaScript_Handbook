@@ -29,6 +29,14 @@ let classN = true;
 // Symbol => unickness 
 // Object => 
 
-    console.log(typeof("amias"));
-    console.log(typeof(null));
-    console.log(typeof(undefined));
+console.log(typeof ("amias"));
+console.log(typeof (null));
+console.log(typeof (undefined));
+
+console.log(Math.min(10, 20, -2, 239, 98));
+console.log(Math.max(10, 1001, 20, 239, 98));
+
+console.table([{
+    "account id": name, "age ": age
+}])
+console.log(`name id ${name} and age is ${age}`);

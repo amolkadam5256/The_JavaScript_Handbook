@@ -24,9 +24,9 @@ let myName = "amol kadam "
 console.log(`my name is :${myName}`)
 
 let numberString = "123";
-console.log(`this is number string ${numberString} ${typeof(numberString)}`)
+console.log(`this is number string ${numberString} ${typeof (numberString)}`)
 let numberN = Number(numberString);
-console.log(`this is number string convert in number  ${numberN} ${typeof(numberN)}`)
+console.log(`this is number string convert in number  ${numberN} ${typeof (numberN)}`)
 
 
 let str = -2;
@@ -34,3 +34,12 @@ let str2 = "1";
 let str3 = "1";
 
 console.log(`${str + str2 + str3}`);
+
+let numberString1 = "123213";
+console.log(numberString1);
+console.log(typeof numberString1);
+
+let numberN2 = Number(numberString1);
+console.log(numberN);
+console.log(typeof numberN);
+console.log(typeof numberString1);

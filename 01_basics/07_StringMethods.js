@@ -1,183 +1,159 @@
+// JavaScript String Methods and Functions Demonstration
+
+// Different ways to define strings in JavaScript
 {
-    // Function to demonstrate different types of strings
-    let str1 = 'Hello using single quotes';  // Single quotes string  
-    let str2 = "Hello2 using Double quotes"; // Double quotes string 
-    let str3 = `Hello${3} using Backticks`; // Template literal with a dynamic value
-
-    // Logs the string with single quotes
-    console.log(str1);
-
-    // Logs the string with double quotes
-    console.log(str2);
-
-    // Logs the string with template literal
-    console.log(str3);
-
-    // Logs a string using backticks, which is more versatile for embedding variables or expressions in a string
-    console.log(`Prefer to use Backticks `);
+    let single = 'Single quotes string'; // Using single quotes
+    let double = "Double quotes string"; // Using double quotes
+    let backtick = `Backticks string with ${2 + 3} dynamic values`; // Using template literals for interpolation
+    console.log(single); // Output: Single quotes string
+    console.log(double); // Output: Double quotes string
+    console.log(backtick); // Output: Backticks string with 5 dynamic values
 }
 
+// String Length
 {
-    // Function to demonstrate string length property
-    let strLength = `Amol Tukaram Kadam`;
-
-    // Logs the length of the string variable 'strLength'
-    console.log(`Length of string variable strLength: ${strLength.length}`);
+    let str = "Amol Kadam";
+    console.log(`Length of string: ${str.length}`); // Outputs the length of the string (10 in this case)
 }
 
+// charAt() Method - Returns the character at a specific index
 {
-    // Function to demonstrate 'charAt' method
-    let strCharAt = `Anmol`;
-
-    // Logs the character at index 2 of the string variable 'strCharAt' using charAt method
-    console.log(`This is charAt method accessing the character at index 2 of 'strCharAt': ${strCharAt.charAt(2)}`);
+    let str = "JavaScript";
+    console.log(`Character at index 4: ${str.charAt(4)}`); // Output: S (character at index 4)
 }
 
+// charCodeAt() Method - Returns the Unicode (ASCII) value of the character at a specific index
 {
-    // Function to demonstrate 'indexOf' method
-    let strIndexOf = `Animal`;
-
-    // Logs the index of the substring 'mal' in the string 'strIndexOf'
-    console.log(`Index of 'mal' in the string: ${strIndexOf.indexOf('mal')}`);
+    let str = "JavaScript";
+    console.log(`Character code at index 0: ${str.charCodeAt(0)}`); // Output: 74 (Unicode of 'J')
 }
 
+// at() Method - Returns the character at a specific index (similar to charAt but supports negative indices)
 {
-    // Function to demonstrate 'lastIndexOf' method
-    let strLastIndex = `Hello Don !`;
-
-    // Logs the last index of character 'o' in the string 'strLastIndex'
-    console.log(`Last index of 'o' in 'Hello Don !': ${strLastIndex.lastIndexOf('o')}`);
+    let str = "JavaScript";
+    console.log(`Character at index 2: ${str.at(2)}`); // Output: v
 }
 
+// indexOf() Method - Finds the first occurrence of a substring
 {
-    // Function to demonstrate 'slice' method
-    // slice works on a separate content without changing the original content
-    let stringSlic = `Amol Tukaram Kadam`;
-
-    // Logs a selected part of the text using slice method
-    console.log(`Selected part of the string using slice: ${stringSlic.slice(5, 13)}`);
+    let str = "Hello JavaScript";
+    console.log(`Index of 'Java': ${str.indexOf('Java')}`); // Output: 6
 }
 
+// lastIndexOf() Method - Finds the last occurrence of a substring
 {
-    // Function to demonstrate 'substring' method
-    let strSubstring = `Amol Tukaram Kadam`;
-
-    // Similar to slice but doesn't accept negative numbers
-    console.log(`Using substring method (similar to slice but does not accept negative numbers): ${strSubstring.substring(0, 13)}`);
-
-    // Logs the original string
-    console.log(`Original string: ${strSubstring}`);
+    let str = "Hello JavaScript Java";
+    console.log(`Last index of 'Java': ${str.lastIndexOf('Java')}`); // Output: 17
 }
 
+// includes() Method - Checks if a string contains a specific substring
 {
-    // Function to demonstrate 'substr' method
-    let strSubstring = `Amol Tukaram Kadam`;
-
-    // Similar to slice but doesn't accept negative numbers
-    console.log(`Using substr method (similar to slice but does not accept negative numbers): ${strSubstring.substr(0, 3)}`);
-
-    // Logs the original string
-    console.log(`Original string: ${strSubstring}`);
+    let str = "Hello JavaScript";
+    console.log(`Does the string include 'Java'? ${str.includes('Java')}`); // Output: true
 }
 
+// startsWith() Method - Checks if a string starts with a specific substring
 {
-    // Function to demonstrate 'toLowerCase' method
-    let strLowercase = `Amol Tukaram Kadam`;
-
-    // Logs the string converted to lowercase
-    console.log(`String in lowercase: ${strLowercase.toLowerCase()}`);
+    let str = "JavaScript is awesome";
+    console.log(`Does the string start with 'Java'? ${str.startsWith('Java')}`); // Output: true
 }
 
+// endsWith() Method - Checks if a string ends with a specific substring
 {
-    // Function to demonstrate 'toUpperCase' method
-    let strUppercase = `Amol Tukaram Kadam`;
-
-    // Logs the string converted to uppercase
-    console.log(`String in uppercase: ${strUppercase.toUpperCase()}`);
+    let str = "JavaScript is awesome";
+    console.log(`Does the string end with 'awesome'? ${str.endsWith('awesome')}`); // Output: true
 }
 
+// slice() Method - Extracts a part of the string using start and end indices
 {
-    // Function to demonstrate 'replace' method
-    let strReplace = `Amol Tukaram Kadam`;
-
-    // Logs the string with 'Amol' replaced by 'Amit'
-    console.log(`String after replacing 'Amol' with 'Amit': ${strReplace.replace("Amol", "Amit")}`);
+    let str = "JavaScript is awesome";
+    console.log(`Sliced string (0 to 10): ${str.slice(0, 10)}`); // Output: JavaScript
 }
 
+// substring() Method - Similar to slice but does not support negative indices
 {
-    // Function to demonstrate 'replaceAll' method
-    let strReplaceAll = `Amol Tukaram Kadam`;
-
-    // Logs the string with all occurrences of 'Amol' replaced by 'Amit'
-    console.log(`String after replacing all 'Amol' with 'Amit': ${strReplaceAll.replaceAll("Amol", "Amit")}`);
+    let str = "JavaScript is awesome";
+    console.log(`Substring (0 to 10): ${str.substring(0, 10)}`); // Output: JavaScript
 }
 
+// replace() Method - Replaces the first occurrence of a substring
 {
-    // Function to demonstrate 'concat' method for string concatenation
-    let concatStr1 = "Amol";
-    let concatStr2 = " Tukaram Kadam";
-
-    // Logs the concatenation of two strings using concat method
-    console.log(`Concatenation of two strings using concat method: ${concatStr1.concat(concatStr2)}`);
+    let str = "Hello JavaScript";
+    console.log(`Replace 'JavaScript' with 'World': ${str.replace('JavaScript', 'World')}`); // Output: Hello World
 }
 
+// replaceAll() Method - Replaces all occurrences of a substring
 {
-    // Function to demonstrate 'trim' method to remove whitespace
-    let whiteSpaceRemove = " amol kadma    ";
-
-    // Logs the string with leading and trailing spaces removed using trim method
-    console.log(`String before trimming: '${whiteSpaceRemove}'`);
-    console.log(`String after removing starting and ending spaces: '${whiteSpaceRemove.trim()}'`);
+    let str = "Java Java Java";
+    console.log(`Replace all 'Java' with 'JS': ${str.replaceAll('Java', 'JS')}`); // Output: JS JS JS
 }
 
+// toUpperCase() Method - Converts a string to uppercase
 {
-    // Function to demonstrate 'split' method
-    let splitString = `Amol kadma amit kadam`;
-
-    // Logs the result of the split function applied to the string
-    console.log(`Split function in string: ${splitString.split(' ')}`);
+    let str = "JavaScript";
+    console.log(`Uppercase string: ${str.toUpperCase()}`); // Output: JAVASCRIPT
 }
 
-
-
+// toLowerCase() Method - Converts a string to lowercase
 {
-    let nam = "Amit kadam";
-    console.log(`thia is your name is : ${nam}  and name lenght is ${nam.length} character of ${nam[2]}`);
+    let str = "JavaScript";
+    console.log(`Lowercase string: ${str.toLowerCase()}`); // Output: javascript
 }
 
+// trim() Method - Removes whitespace from both ends of the string
 {
-    let nam = "Amit kadam";
-    console.log(`charAt function is use for select character charAt(2) in string  ${nam.charAt(2)}`)
+    let str = "   JavaScript   ";
+    console.log(`Trimmed string: '${str.trim()}'`); // Output: 'JavaScript'
 }
 
+// concat() Method - Concatenates two or more strings
 {
-    let name = "Amol Kadam";
-    console.log(`hire is character convet in unicode using charcodeAt(3) ${name.charCodeAt(3)}`)
+    let str1 = "Hello";
+    let str2 = "World";
+    console.log(`Concatenated string: ${str1.concat(' ', str2)}`); // Output: Hello World
 }
 
+// split() Method - Splits a string into an array using a delimiter
 {
-    let concat1 = "cat";
-    let catcon2 = "dog";
-    console.log(`Concnation of two string in using string function : ${concat1.concat("!", catcon2)}`)
+    let str = "JavaScript is awesome";
+    console.log(`Split string by space: ${str.split(' ')}`); // Output: ['JavaScript', 'is', 'awesome']
 }
 
-
+// match() Method - Finds matches using a regular expression
 {
-    let substr1 = " Amol Tukaram Kadam";
-    console.log(`includes() method is check string substring is part of original string or not <br/> Check in your string  Amol is sub string is it there or not ${substr1.includes("Amol")}`);
+    let str = "JavaScript is awesome";
+    console.log(`Match 'Java': ${str.match(/Java/)}`); // Output: ['Java']
 }
 
+// repeat() Method - Repeats a string a specified number of times
 {
-    let indexSearch = "Amol Tukaram Kadam";
-    console.log(`Check index of substring string index amol mol index is 1 mol( it proint start index of string )  ${indexSearch.indexOf("Tukaram")}`);
+    let str = "JS";
+    console.log(`Repeat string 3 times: ${str.repeat(3)}`); // Output: JSJSJS
 }
 
+// padStart() and padEnd() Methods - Pads a string with another string to a specified length
 {
-    // it show last lastIndexOf latter or word  ex amol amol lastindexof(a)it return last a index number 
-    let str = "amol tukaram";
-    console.log(`Lastindex of substring is : ${str.lastIndexOf("m")}`)
+    let str = "5";
+    console.log(`Padded start: ${str.padStart(4, '0')}`); // Output: 0005
+    console.log(`Padded end: ${str.padEnd(4, '0')}`); // Output: 5000
 }
 
+// localeCompare() Method - Compares two strings lexicographically
 {
-    let strmatch = "match me this content ";
+    let str1 = "apple";
+    let str2 = "banana";
+    console.log(`Locale compare result: ${str1.localeCompare(str2)}`); // Output: -1 (apple comes before banana)
+}
+
+// toString() Method - Converts a string object to its primitive value
+{
+    let strObj = new String("Hello");
+    console.log(`Primitive value: ${strObj.toString()}`); // Output: Hello
+}
+
+// Additional Example: Finding Substrings
+{
+    let str = "Amol Tukaram Kadam";
+    console.log(`Index of 'Tukaram': ${str.indexOf("Tukaram")}`); // Output: 5
+    console.log(`Last index of 'a': ${str.lastIndexOf("a")}`); // Output: 17
 }

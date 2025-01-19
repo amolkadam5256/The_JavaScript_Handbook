@@ -31,7 +31,9 @@ console.error("ERROR");
 console.debug("DEBUG");
 
 // Displays data in a tabular format (useful for arrays or objects)
-console.table("TABLE");
+console.table([
+  { "account id": accountId, "email": accountEmail, "password": accountPassword, "city": accountCity }
+]);
 
 // Starts a new console group (indents logs until groupEnd is called)
 console.group("GROUP");
