@@ -157,3 +157,11 @@
     console.log(`Index of 'Tukaram': ${str.indexOf("Tukaram")}`); // Output: 5
     console.log(`Last index of 'a': ${str.lastIndexOf("a")}`); // Output: 17
 }
+
+/* Important Notes:
+1. String methods in JavaScript are case-sensitive.
+2. Some methods like `slice()` and `substring()` have different behaviors with negative indices (slice supports negative indices, while substring does not).
+3. Methods like `replace()` replace only the first occurrence of a substring, whereas `replaceAll()` replaces all occurrences.
+4. `charAt()` and `at()` are similar but `at()` supports negative indices for counting from the end of the string.
+5. Methods like `trim()` help clean strings by removing unnecessary spaces from both ends, which is important in user input validation.
+6. Regular expressions can be used with methods like `match()` for pattern-based searching. */

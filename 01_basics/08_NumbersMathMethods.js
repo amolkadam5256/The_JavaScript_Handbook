@@ -1,147 +1,163 @@
-// ================================
-// JavaScript Number and Math
-// ================================
+// ===============================
+// Number Properties and Methods
+// ===============================
 
-// 1. Number() Constructor
-{
-    console.log(`Number is ${Number("123")}`);        // Converts "123" to a number: 123
-    console.log(`Number is ${Number("123.87")}`);    // Converts "123.87" to a number: 123.87
-    console.log(`Number is ${Number("Hello")}`);     // Converts "Hello" to NaN
-}
+// Number Properties: These are predefined properties of the Number object.
 
-// 2. parseInt()
-{
-    console.log(`Using parseInt to convert string to number: ${parseInt("123.45")}`); // 123
-    console.log(parseInt("42 is the answer"));       // 42
-    console.log(parseInt("abc"));                   // NaN
-}
+// Number.MAX_VALUE: The largest possible number in JavaScript.
+console.log("Number.MAX_VALUE:", Number.MAX_VALUE);
 
-// 3. parseFloat()
-{
-    console.log(`Convert integer number into floating number: ${parseFloat(123)}`);  // 123
-    console.log(`Convert string into floating number: ${parseFloat("234.54prg")}`); // 234.54
-}
+// Number.MIN_VALUE: The smallest positive number that can be represented.
+console.log("Number.MIN_VALUE:", Number.MIN_VALUE);
 
-// 4. toString()
-{
-    let num = 100;
-    let num2 = "100";
-    console.log(`Value is ${num.toString()} and its type is ${typeof (num.toString())}`); // "100", string
-    console.log(`Value is ${Number(num2)} and its type is ${typeof (Number(num2))}`);    // 100, number
-}
+// Number.NaN: Represents 'Not-A-Number', used for invalid number operations.
+console.log("Number.NaN:", Number.NaN);
 
-// 5. toFixed()
-{
-    let num = 1234.86598;
-    console.log(`Original Value: ${num} | toFixed(4): ${num.toFixed(4)}`); // 1234.8660
-    console.log(`Original Value: ${num} | toFixed(2): ${num.toFixed(2)}`); // 1234.87
-}
+// Number.NEGATIVE_INFINITY: Represents negative infinity in JavaScript.
+console.log("Number.NEGATIVE_INFINITY:", Number.NEGATIVE_INFINITY);
 
-// 6. toPrecision()
-{
-    let num = 123.9898789;
-    console.log(`Original Value: ${num} | toPrecision(6): ${num.toPrecision(6)}`); // 123.990
-}
+// Number.POSITIVE_INFINITY: Represents positive infinity in JavaScript.
+console.log("Number.POSITIVE_INFINITY:", Number.POSITIVE_INFINITY);
 
-// 7. isNaN()
-{
-    console.log(`Check isNaN("123"): ${isNaN("123")}`);       // false
-    console.log(`Check isNaN("Hello"): ${isNaN("Hello")}`);   // true
-    console.log(`Check isNaN(true): ${isNaN(true)}`);         // false
-    console.log(`Check isNaN(undefined): ${isNaN(undefined)}`); // true
-}
+// Number.EPSILON: The smallest difference between two representable numbers.
+console.log("Number.EPSILON:", Number.EPSILON);
 
-// 8. isFinite()
-{
-    console.log(isFinite(123));        // true
-    console.log(isFinite(Infinity));   // false
-    console.log(isFinite(NaN));        // false
-}
 
-// ================================
-// JavaScript Math Object
-// ================================
+// ===============================
+// Number Methods
+// ===============================
 
-// 9. Math.round()
-{
-    console.log(`Math.round(4.90): ${Math.round(4.90)}`);  // 5
-    console.log(`Math.round(4.49): ${Math.round(4.49)}`);  // 4
-}
+// Number Methods: Methods for working with numbers in JavaScript.
 
-// 10. Math.ceil()
-{
-    console.log(`Math.ceil(4.2): ${Math.ceil(4.2)}`);      // 5
-    console.log(`Math.ceil(-4.8): ${Math.ceil(-4.8)}`);    // -4
-}
+// Number.isFinite(value): Checks if the value is a finite number.
+console.log("\nNumber.isFinite(10):", Number.isFinite(10));
 
-// 11. Math.floor()
-{
-    console.log(`Math.floor(4.7): ${Math.floor(4.7)}`);    // 4
-    console.log(`Math.floor(-4.7): ${Math.floor(-4.7)}`);  // -5
-}
+// Number.isInteger(value): Checks if the value is an integer.
+console.log("Number.isInteger(10.5):", Number.isInteger(10.5));
 
-// 12. Math.trunc()
-{
-    console.log(`Math.trunc(4.9): ${Math.trunc(4.9)}`);    // 4
-    console.log(`Math.trunc(-4.9): ${Math.trunc(-4.9)}`);  // -4
-}
+// Number.isNaN(value): Checks if the value is NaN (Not-A-Number).
+console.log("Number.isNaN('hello'):", Number.isNaN('hello'));
 
-// 13. Math.pow()
-{
-    console.log(`Math.pow(2, 3): ${Math.pow(2, 3)}`);      // 8
-    console.log(`Math.pow(5, 2): ${Math.pow(5, 2)}`);      // 25
-}
+// Number.isSafeInteger(value): Checks if the value is a safe integer.
+console.log("Number.isSafeInteger(9007199254740991):", Number.isSafeInteger(9007199254740991));
 
-// 14. Math.sqrt()
-{
-    console.log(`Math.sqrt(16): ${Math.sqrt(16)}`);        // 4
-    console.log(`Math.sqrt(2): ${Math.sqrt(2)}`);          // 1.414...
-}
+// Number.parseFloat(value): Converts a string to a floating point number.
+console.log("Number.parseFloat('3.14abc'):", Number.parseFloat('3.14abc'));
 
-// 15. Math.cbrt()
-{
-    console.log(`Math.cbrt(27): ${Math.cbrt(27)}`);        // 3
-    console.log(`Math.cbrt(64): ${Math.cbrt(64)}`);        // 4
-}
+// Number.parseInt(value): Converts a string to an integer.
+console.log("Number.parseInt('10px'):", Number.parseInt('10px'));
 
-// 16. Math.abs()
-{
-    console.log(`Math.abs(-10): ${Math.abs(-10)}`);        // 10
-    console.log(`Math.abs(10): ${Math.abs(10)}`);          // 10
-}
+// Number.toFixed(digits): Formats a number to a fixed number of decimal places.
+let num = 123.456;
+console.log("Number.toFixed(2):", num.toFixed(2));
 
-// 17. Math.random()
-{
-    console.log(`Math.random(): ${Math.random()}`);        // Random number between 0 and 1
-    let min = 1, max = 10;
-    let randomInRange = Math.floor(Math.random() * (max - min + 1)) + min;
-    console.log(`Random number between ${min} and ${max}: ${randomInRange}`);
-}
+// Number.toExponential(digits): Converts a number to exponential notation.
+console.log("Number.toExponential(2):", num.toExponential(2));
 
-// 18. Math.log() and Math.log10()
-{
-    console.log(`Math.log(1): ${Math.log(1)}`);            // 0
-    console.log(`Math.log10(100): ${Math.log10(100)}`);    // 2
-}
+// Number.toPrecision(precision): Returns a string representing the number with a specified precision.
+console.log("Number.toPrecision(4):", num.toPrecision(4));
 
-// 19. Math.max() and Math.min()
-{
-    console.log(`Math.max(10, 20, 30): ${Math.max(10, 20, 30)}`); // 30
-    console.log(`Math.min(10, 20, 30): ${Math.min(10, 20, 30)}`); // 10
-}
+// Number.toString(radix): Returns a string representing the number in the given base (radix).
+console.log("Number.toString(2):", num.toString(2));
 
-// ================================
-// JavaScript Number Properties
-// ================================
 
-{
-    console.log(`Number.MAX_VALUE: ${Number.MAX_VALUE}`);          // Largest positive number
-    console.log(`Number.MIN_VALUE: ${Number.MIN_VALUE}`);          // Smallest positive number
-    console.log(`Number.POSITIVE_INFINITY: ${Number.POSITIVE_INFINITY}`); // Infinity
-    console.log(`Number.NEGATIVE_INFINITY: ${Number.NEGATIVE_INFINITY}`); // -Infinity
-    console.log(`Number.NaN: ${Number.NaN}`);                      // NaN
-}
+// ===============================
+// Math Methods
+// ===============================
 
-// ================================
-// End of Number and Math in JavaScript
-// ================================
+// Math Methods: Common mathematical functions and operations in JavaScript.
+
+// Math.abs(value): Returns the absolute value of a number.
+console.log("\nMath.abs(-10):", Math.abs(-10));
+
+// Math.acos(value): Returns the inverse cosine of a number (in radians).
+console.log("Math.acos(1):", Math.acos(1));
+
+// Math.asin(value): Returns the inverse sine of a number (in radians).
+console.log("Math.asin(1):", Math.asin(1));
+
+// Math.atan(value): Returns the inverse tangent of a number (in radians).
+console.log("Math.atan(1):", Math.atan(1));
+
+// Math.atan2(y, x): Returns the inverse tangent of the quotient (y/x), in radians.
+console.log("Math.atan2(1, 1):", Math.atan2(1, 1));
+
+// Math.ceil(value): Rounds a number upwards to the nearest integer.
+console.log("Math.ceil(5.3):", Math.ceil(5.3));
+
+// Math.cos(value): Returns the cosine of an angle (in radians).
+console.log("Math.cos(Math.PI):", Math.cos(Math.PI));
+
+// Math.exp(value): Returns Euler's number (e) raised to the power of the given number.
+console.log("Math.exp(2):", Math.exp(2));
+
+// Math.floor(value): Rounds a number downwards to the nearest integer.
+console.log("Math.floor(5.7):", Math.floor(5.7));
+
+// Math.hypot(value1, value2, ...): Returns the square root of the sum of squares of its arguments.
+console.log("Math.hypot(3, 4):", Math.hypot(3, 4));
+
+// Math.log(value): Returns the natural logarithm (base e) of a number.
+console.log("Math.log(10):", Math.log(10));
+
+// Math.log10(value): Returns the base-10 logarithm of a number.
+console.log("Math.log10(100):", Math.log10(100));
+
+// Math.log2(value): Returns the base-2 logarithm of a number.
+console.log("Math.log2(8):", Math.log2(8));
+
+// Math.max(value1, value2, ...): Returns the largest of the zero or more numbers given.
+console.log("Math.max(1, 2, 3):", Math.max(1, 2, 3));
+
+// Math.min(value1, value2, ...): Returns the smallest of the zero or more numbers given.
+console.log("Math.min(1, 2, 3):", Math.min(1, 2, 3));
+
+// Math.pow(base, exponent): Returns base raised to the power of exponent.
+console.log("Math.pow(2, 3):", Math.pow(2, 3));
+
+// Math.random(): Returns a pseudo-random number between 0 (inclusive) and 1 (exclusive).
+console.log("Math.random():", Math.random());
+
+// Math.round(value): Rounds a number to the nearest integer.
+console.log("Math.round(4.7):", Math.round(4.7));
+
+// Math.sin(value): Returns the sine of an angle (in radians).
+console.log("Math.sin(Math.PI / 2):", Math.sin(Math.PI / 2));
+
+// Math.sqrt(value): Returns the square root of a number.
+console.log("Math.sqrt(16):", Math.sqrt(16));
+
+// Math.tan(value): Returns the tangent of an angle (in radians).
+console.log("Math.tan(Math.PI / 4):", Math.tan(Math.PI / 4));
+
+// Math.trunc(value): Returns the integer part of the number (removes decimals).
+console.log("Math.trunc(4.9):", Math.trunc(4.9));
+
+
+// ===============================
+// Other Conversion Methods
+// ===============================
+
+// Conversion Methods: These methods convert strings to numbers.
+
+// Number(value): Converts a string or other type to a number.
+console.log("\nNumber('123'):", Number('123'));
+
+// parseFloat(value): Converts a string to a floating point number.
+console.log("parseFloat('10.5px'):", parseFloat('10.5px'));
+
+// parseInt(value): Converts a string to an integer.
+console.log("parseInt('10.5px'):", parseInt('10.5px'));
+
+
+// ===============================
+// Rounding Methods
+// ===============================
+
+// Rounding Examples: Demonstrates rounding numbers in different ways.
+
+let value = 7.5;
+console.log("\nRounding Examples:");
+console.log("Math.round(7.5):", Math.round(value)); // Round to nearest integer
+console.log("Math.ceil(7.5):", Math.ceil(value)); // Round upwards
+console.log("Math.floor(7.5):", Math.floor(value)); // Round downwards
