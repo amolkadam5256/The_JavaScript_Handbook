@@ -122,7 +122,7 @@
 // match() Method - Finds matches using a regular expression
 {
     let str = "JavaScript is awesome";
-    console.log(`Match 'Java': ${str.match(/Java/)}`); // Output: ['Java']
+    console.log(`Match 'Java': ${str.match(/Script/)}`); // Output: ['Java']
 }
 
 // repeat() Method - Repeats a string a specified number of times
