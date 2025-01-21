@@ -114,3 +114,7 @@ console.assert(2===3, "is Not equal");
 
 console.clear();
 console.log("Console is clear using console.clear() method or logs ");
+
+//  02 data types pratice 
+
+console.log("Data Types pratice s");    
