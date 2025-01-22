@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stopwatch</title>
+    <!-- link tailwind css cdn -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="./spaceTime.css">
+</head>
+
+<body>
+    <canvas id="universeCanvas" class="absolute"></canvas>
+
+    <div class="lg:absolute relative text-center right-0">
+        <h2 class="inline-flex text-2xl md:text-5xl font-[TickingTimebombBBItal] text-white py-10 pb-10 px-[100px] rounded-[34px]"
+            id="fullTimeDisplay">
+            <span id="hrs1">00</span>
+            <span>:</span>
+            <span id="min1">00</span>
+            <span>:</span>
+            <span id="sec1">00</span>
+            <span id="ampm">AM</span>
+
+        </h2>
+    </div>
+
+    <h1
+        class="relative block text-white text-[60px] sm:text-[130px] text-center text-bold uppercase font-[TickingTimebombBBItal] font-normal leading-[80px] pt-5">
+        SpaceTime
+    </h1>
+
+    <div class="relative flex text-black w-[90%] mx-auto py-5 px-5">
+        <div class="relative w-[100%] flex justify-center">
+            <li
+                class="text-white text-2xl sm:text-4xl font-bold uppercase bg-blue-700 mx-2 list-none px-3 py-4 rounded-[15px]">
+                <a href="./Home.html">SpaceTime</a>
+            </li>
+            <li
+                class="text-white text-2xl sm:text-4xl font-bold uppercase bg-blue-700 mx-2 list-none px-3 py-4 rounded-[15px]">
+                <a href="./stopwatch.html">Stopwatch</a>
+            </li>
+        </div>
+    </div>
+
+    <div class="clock relative justify-center text-center text-white mx-auto py-[20px] sm:py-[40px]">
+        <h2 class="inline-flex text-5xl md:text-9xl text-center font-[TickingTimebombBBItal] text-white pb-10 px-[100px] rounded-[34px]"
+            id="currentTimeDisplay">
+            <span id="clockHours">00</span>
+            <span>:</span>
+            <span id="clockMinutes">00</span>
+            <span>:</span>
+            <span id="clockSeconds">00</span>
+        </h2>
+        <div class="text-5xl sm:text-9xl py-3 md:py-0 tracking-[10px] font-[TickingTimebombBBItal] relative flex justify-center"
+            id="millisecondsDisplay">000</div>
+        <div class="text-3xl sm:text-5xl py-3 md:py-0 tracking-[10px] font-[TickingTimebombBBItal] relative flex justify-center"
+            id="millisLabel">MILLIS</div>
+
+        <div class="relative flex justify-around mx-auto pt-10 ">
+            <button id="startButton"
+                class="text-2xl sm:text-5xl px-5 sm:px-10 py-4 sm:py-5 border-2 rounded-[9px] border-gray-700">Start</button>
+            <button id="pauseButton"
+                class="text-2xl sm:text-5xl px-5 sm:px-10 py-4 sm:py-5 border-2 rounded-[9px] border-gray-700">Pause</button>
+        </div>
+    </div>
+
+    <script src="./StopWach.js"></script>
+    <script src="./baground.js"></script>
+    <script src="./spaceTime.js"></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>
