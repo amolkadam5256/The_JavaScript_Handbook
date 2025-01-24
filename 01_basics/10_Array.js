@@ -38,3 +38,5 @@ const info = [
 
 console.table(info);
 console.table(info[3].fullName);
+console.log(` access info of Priya full name and age ${info[4].fullName} and age is ${info[4].age} and address of priya rani is ${info[4].city
+}`)
