@@ -1,0 +1,1 @@
+console.log("Pratice of Array");

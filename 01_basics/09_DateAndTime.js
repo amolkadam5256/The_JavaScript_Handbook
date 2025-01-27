@@ -126,15 +126,15 @@ console.log(time.toUTCString());
 // secon format 
 
 
-let dateForm = new Date(2025,0,23);
-let dateForm2 = new Date(2025,0,23, 5,3)
+let dateForm = new Date(2025, 0, 23);
+let dateForm2 = new Date(2025, 0, 23, 5, 3)
 console.log(`${dateForm.toDateString()}`);
 console.log(`${dateForm2.toLocaleString()}`);
 
 
 let myTimeStap = Date.now();
 console.log(myTimeStap);
-console.log(Math.floor(Date.now()/1000));   
+console.log(Math.floor(Date.now() / 1000));
 
 
 let aa = new Date();
@@ -144,6 +144,7 @@ console.log(aa.getDate());
 console.log(aa.getMonth());
 console.log(`Hello`);
 
-aa.toLocaleString('default',{
-    weekday:"long",
+aa.toLocaleString('default', {
+    weekday: "long",
+    weekday: "short",
 })
