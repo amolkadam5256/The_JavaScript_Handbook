@@ -107,3 +107,43 @@ console.log("Parsed Date (ISO 8601 format): ", parsedDate);
 let utcDate = new Date(Date.UTC(2025, 0, 21, 10, 0, 0));  // Jan 21, 2025, 10:00 AM UTC
 console.log("UTC Date: ", utcDate);
 console.log("UTC Date in ISO 8601 format: ", utcDate.toISOString());
+
+
+console.clear();
+const time = new Date;
+console.log(`${time.getDate()} hours  ${time.getUTCHours()}`);
+console.log(time.toString());
+console.log(time.toDateString());
+console.log(time.toISOString());
+console.log(time.toJSON());
+console.log(time.toLocaleDateString());
+console.log(time.toLocaleString());
+console.log(time.toLocaleTimeString());
+console.log(time.toTimeString());
+console.log(time.toUTCString());
+
+
+// secon format 
+
+
+let dateForm = new Date(2025,0,23);
+let dateForm2 = new Date(2025,0,23, 5,3)
+console.log(`${dateForm.toDateString()}`);
+console.log(`${dateForm2.toLocaleString()}`);
+
+
+let myTimeStap = Date.now();
+console.log(myTimeStap);
+console.log(Math.floor(Date.now()/1000));   
+
+
+let aa = new Date();
+
+console.log(aa.getDay());
+console.log(aa.getDate());
+console.log(aa.getMonth());
+console.log(`Hello`);
+
+aa.toLocaleString('default',{
+    weekday:"long",
+})
