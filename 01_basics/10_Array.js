@@ -129,7 +129,7 @@ console.log(fruits);
 // slice(): Method to extract part of an array.
 
 // Array for demonstration
-const numbersArray = [10, 20, 30, 40, 50];
+const numbersArray = [10, 20, 30,    40, 50];
 
 // Example methods with boolean outputs
 console.log("Array: ", numbersArray);
