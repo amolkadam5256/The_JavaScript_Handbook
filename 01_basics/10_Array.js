@@ -129,7 +129,7 @@ console.log(fruits);
 // slice(): Method to extract part of an array.
 
 // Array for demonstration
-const numbersArray = [10, 20, 30,    40, 50];
+const numbersArray = [10, 20, 30,40, 50];
 
 // Example methods with boolean outputs
 console.log("Array: ", numbersArray);
@@ -139,10 +139,10 @@ const areAllGreaterThanFive = numbersArray.every(num => num > 5);
 console.log("Every element > 5: ", areAllGreaterThanFive); // true
 
 // 2. Array.some() - Checks if at least one element passes a condition
-// const isAnyGreaterThanThirty = numbersArray.some(num => num > 30);
-// console.log("Some element > 30: ", isAnyGreaterThanThirty); // true
+const isAnyGreaterThanThirty = numbersArray.some(num => num > 20);
+console.log("Some element > 30: ", isAnyGreaterThanThirty); // true
 
-// // 3. Array.includes() - Checks if a specific value exists in the array
+// 3. Array.includes() - Checks if a specific value exists in the array
 // const doesContainTwenty = numbersArray.includes(20);
 // console.log("Includes 20: ", doesContainTwenty); // true
 
