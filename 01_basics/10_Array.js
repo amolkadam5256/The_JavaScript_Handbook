@@ -52,6 +52,12 @@ let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 // // Iterate through the array and display each element
 arr.forEach(num => console.log(num)); // Using forEach for cleaner iteration
 
+
+let arr3= [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+arr3.forEach((num , index, arr3)=>{
+    console.log(`use of forEach index :${index} value : ${num} arr all items  ${arr3}`)
+})
+
 // Create an empty array with 5 undefined slots
 let arrcreate = new Array(5);
 console.log(`Length of array is ${arrcreate.length}`); // Display length of the array
@@ -149,7 +155,7 @@ console.log("Some element > 30: ", isAnyGreaterThanThirty); // true
 // // 4. Array.isArray() - Checks if the given value is an array
 // const isNumbersArray = Array.isArray(numbersArray);
 // console.log("Is Array: ", isNumbersArray); // true
-
+   
 // // 5. Array.find() - Finds an element matching a condition
 // const isFoundGreaterThanThirty = Boolean(numbersArray.find(num => num > 30));
 // console.log("Find element > 30: ", isFoundGreaterThanThirty); // true
