@@ -3,54 +3,88 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SpaceTime - Star Animation</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    body {
-      margin: 0;
-      background: black;
-      overflow: hidden;
-    }
-
-    canvas {
-      display: block;
-    }
-
-    .button-container {
-      position: absolute;
-      top: 20px;
-      left: 50%;
-      transform: translateX(-50%);
-      z-index: 10;
-    }
-
-    .btn {
-      padding: 10px 20px;
-      background-color: #1d4ed8;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      font-size: 18px;
-      cursor: pointer;
-      margin: 10px;
-    }
-
-    .btn:hover {
-      background-color: #2563eb;
-    }
-  </style>
+  <title>Document</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 </head>
 
 <body>
-  <canvas id="universeCanvas"></canvas>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
 
-  <div class="button-container">
-    <button id="startBtn" class="btn">Start Animation</button>
-    <button id="stopBtn" class="btn">Stop Animation</button>
+    div {
+      width: 80%;
+      margin: 0 auto;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+
+    h2 {
+      color: #333;
+    }
+
+    h3 {
+      color: #333;
+    }
+
+    p {
+      color: #333;
+    }
+  </style>
+  <div>
+    <h1>Mini Project 2</h1>
+    <h2>Task 1</h2>
+    <p>Write a program that prints the numbers from 1 to 100. But for multiples of three print “Fizz” instead of the
+      number and for the multiples of five print “Buzz”. For numbers which are multiples of both three and five print
+      “FizzBuzz”.</p>
+    <h3>Output:</h3>
+    <?php
+      for ($i = 1; $i <= 100; $i++) {
+        if ($i % 3 == 0 && $i % 5 == 0) {
+          echo "FizzBuzz<br>";
+        } elseif ($i % 3 == 0) {
+          echo "Fizz<br>";
+        } elseif ($i % 5 == 0) {
+          echo "Buzz<br>";
+        } else {
+          echo $i . "<br>";
+        }
+      }
+    ?>
   </div>
+</body>
 
-  <script src="./sc.js"></script>
+</html>
+  <div>
+    <h1>Mini Project 2</h1>
+    <h2>Task 1</h2>
+    <p>Write a program that prints the numbers from 1 to 100. But for multiples of three print “Fizz” instead of the
+      number and for the multiples of five print “Buzz”. For numbers which are multiples of both three and five print
+      “FizzBuzz”.</p>
+    <h3>Output:</h3>
+    <?php
+      for ($i = 1; $i <= 100; $i++) {
+        if ($i % 3 == 0 && $i % 5 == 0) {
+          echo "FizzBuzz<br>";
+        } elseif ($i % 3 == 0) {
+          echo "Fizz<br>";
+        } elseif ($i % 5 == 0) {
+          echo "Buzz<br>";
+        } else {
+          echo $i . "<br>";
+        }
+      }
+    ?>
+  </div>
 </body>
 
 </html>

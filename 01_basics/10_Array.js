@@ -151,92 +151,92 @@ const isAnyGreaterThanThirty = numbersArray.some(num => num > 20);
 console.log("Some element > 30: ", isAnyGreaterThanThirty); // true
 
 // 3. Array.includes() - Checks if a specific value exists in the array
-// const doesContainTwenty = numbersArray.includes(20);
-// console.log("Includes 20: ", doesContainTwenty); // true
+const doesContainTwenty = numbersArray.includes(20);
+console.log("Includes 20: ", doesContainTwenty); // true
 
-// // 4. Array.isArray() - Checks if the given value is an array
-// const isNumbersArray = Array.isArray(numbersArray);
-// console.log("Is Array: ", isNumbersArray); // true
+// 4. Array.isArray() - Checks if the given value is an array
+const isNumbersArray = Array.isArray(numbersArray);
+console.log("Is Array: ", isNumbersArray); // true
    
-// // 5. Array.find() - Finds an element matching a condition
-// const isFoundGreaterThanThirty = Boolean(numbersArray.find(num => num > 30));
-// console.log("Find element > 30: ", isFoundGreaterThanThirty); // true
+// 5. Array.find() - Finds an element matching a condition
+const isFoundGreaterThanThirty = Boolean(numbersArray.find(num => num > 30));
+console.log("Find element > 30: ", isFoundGreaterThanThirty); // true
 
-// // 6. Array.findIndex() - Finds the index of the first element matching a condition
-// const isIndexFoundGreaterThanThirty = numbersArray.findIndex(num => num > 30) !== -1;
-// console.log("Find Index > 30 exists: ", isIndexFoundGreaterThanThirty); // true
+// 6. Array.findIndex() - Finds the index of the first element matching a condition
+const isIndexFoundGreaterThanThirty = numbersArray.findIndex(num => num > 30) !== -1;
+console.log("Find Index > 30 exists: ", isIndexFoundGreaterThanThirty); // true
 
-// // 7. Array.filter() - Filters elements that match a condition (converted to boolean)
-// const isFilterNonEmpty = numbersArray.filter(num => num > 30).length > 0;
-// console.log("Filter elements > 30 exists: ", isFilterNonEmpty); // true
+// 7. Array.filter() - Filters elements that match a condition (converted to boolean)
+const isFilterNonEmpty = numbersArray.filter(num => num > 30).length > 0;
+console.log("Filter elements > 30 exists: ", isFilterNonEmpty); // true
 
-// // 8. Array.map() - Transforms elements (converted to boolean to show effect)
-// const isTransformationApplied = numbersArray.map(num => num * 2).length === numbersArray.length;
-// console.log("Map applied correctly: ", isTransformationApplied); // true
+// 8. Array.map() - Transforms elements (converted to boolean to show effect)
+const isTransformationApplied = numbersArray.map(num => num * 2).length === numbersArray.length;
+console.log("Map applied correctly: ", isTransformationApplied); // true
 
-// // 9. Array.reduce() - Reduces to a single value (converted to boolean for sum > 0)
-// const isSumPositive = numbersArray.reduce((sum, num) => sum + num, 0) > 0;
-// console.log("Reduce sum > 0: ", isSumPositive); // true
+// 9. Array.reduce() - Reduces to a single value (converted to boolean for sum > 0)
+const isSumPositive = numbersArray.reduce((sum, num) => sum + num, 0) > 0;
+console.log("Reduce sum > 0: ", isSumPositive); // true
 
-// // 10. Array.sort() - Sorts elements (check if sorting worked by comparing original)
-// const isSortedCorrectly = JSON.stringify([...numbersArray].sort((a, b) => a - b)) === JSON.stringify(numbersArray);
-// console.log("Sorted correctly: ", isSortedCorrectly); // true
+// 10. Array.sort() - Sorts elements (check if sorting worked by comparing original)
+const isSortedCorrectly = JSON.stringify([...numbersArray].sort((a, b) => a - b)) === JSON.stringify(numbersArray);
+console.log("Sorted correctly: ", isSortedCorrectly); // true
 
-// // 11. Array.push() - Adds an element (check success by length comparison)
-// const tempArrayAfterPush = [...numbersArray];
-// tempArrayAfterPush.push(60);
-// const isPushSuccessful = tempArrayAfterPush.length > numbersArray.length;
-// console.log("Push successful: ", isPushSuccessful); // true
+// 11. Array.push() - Adds an element (check success by length comparison)
+const tempArrayAfterPush = [...numbersArray];
+tempArrayAfterPush.push(60);
+const isPushSuccessful = tempArrayAfterPush.length > numbersArray.length;
+console.log("Push successful: ", isPushSuccessful); // true
 
-// // 12. Array.pop() - Removes the last element (check success by length comparison)
-// const tempArrayAfterPop = [...numbersArray];
-// tempArrayAfterPop.pop();
-// const isPopSuccessful = tempArrayAfterPop.length < numbersArray.length;
-// console.log("Pop successful: ", isPopSuccessful); // true
+// 12. Array.pop() - Removes the last element (check success by length comparison)
+const tempArrayAfterPop = [...numbersArray];
+tempArrayAfterPop.pop();
+const isPopSuccessful = tempArrayAfterPop.length < numbersArray.length;
+console.log("Pop successful: ", isPopSuccessful); // true
 
-// // 13. Array.shift() - Removes the first element (check success by length comparison)
-// const tempArrayAfterShift = [...numbersArray];
-// tempArrayAfterShift.shift();
-// const isShiftSuccessful = tempArrayAfterShift.length < numbersArray.length;
-// console.log("Shift successful: ", isShiftSuccessful); // true
+// 13. Array.shift() - Removes the first element (check success by length comparison)
+const tempArrayAfterShift = [...numbersArray];
+tempArrayAfterShift.shift();
+const isShiftSuccessful = tempArrayAfterShift.length < numbersArray.length;
+console.log("Shift successful: ", isShiftSuccessful); // true
 
-// // 14. Array.unshift() - Adds an element to the beginning (check success by length comparison)
-// const tempArrayAfterUnshift = [...numbersArray];
-// tempArrayAfterUnshift.unshift(5);
-// const isUnshiftSuccessful = tempArrayAfterUnshift.length > numbersArray.length;
-// console.log("Unshift successful: ", isUnshiftSuccessful); // true
+// 14. Array.unshift() - Adds an element to the beginning (check success by length comparison)
+const tempArrayAfterUnshift = [...numbersArray];
+tempArrayAfterUnshift.unshift(5);
+const isUnshiftSuccessful = tempArrayAfterUnshift.length > numbersArray.length;
+console.log("Unshift successful: ", isUnshiftSuccessful); // true
 
-// // 15. Array.splice() - Adds/removes elements in the middle (check success by length comparison)
-// const tempArrayAfterSplice = [...numbersArray];
-// tempArrayAfterSplice.splice(2, 1, 99); // Replace 3rd element
-// const isSpliceSuccessful = tempArrayAfterSplice.length === numbersArray.length;
-// console.log("Splice successful: ", isSpliceSuccessful); // true
+// 15. Array.splice() - Adds/removes elements in the middle (check success by length comparison)
+const tempArrayAfterSplice = [...numbersArray];
+tempArrayAfterSplice.splice(2, 1, 99); // Replace 3rd element
+const isSpliceSuccessful = tempArrayAfterSplice.length === numbersArray.length;
+console.log("Splice successful: ", isSpliceSuccessful); // true
 
-// // 16. Array.concat() - Merges arrays (check success by new array length)
-// const isConcatSuccessful = numbersArray.concat([60, 70]).length > numbersArray.length;
-// console.log("Concat successful: ", isConcatSuccessful); // true
+// 16. Array.concat() - Merges arrays (check success by new array length)
+const isConcatSuccessful = numbersArray.concat([60, 70]).length > numbersArray.length;
+console.log("Concat successful: ", isConcatSuccessful); // true
 
-// // 17. Array.slice() - Creates a shallow copy (check success by comparison)
-// const isSliceCorrect = JSON.stringify(numbersArray.slice(0, 2)) === JSON.stringify([10, 20]);
-// console.log("Slice successful: ", isSliceCorrect); // true
+// 17. Array.slice() - Creates a shallow copy (check success by comparison)
+const isSliceCorrect = JSON.stringify(numbersArray.slice(0, 2)) === JSON.stringify([10, 20]);
+console.log("Slice successful: ", isSliceCorrect); // true
 
-// // 18. Remove duplicates from an array
-// const numbersWithDuplicates = [1, 2, 2, 3, 4, 4, 5];
-// const uniqueNumbers = [...new Set(numbersWithDuplicates)]; // Using Set to remove duplicates
-// console.log("Unique numbers:", uniqueNumbers); // [1, 2, 3, 4, 5]
+// 18. Remove duplicates from an array
+const numbersWithDuplicates = [1, 2, 2, 3, 4, 4, 5];
+const uniqueNumbers = [...new Set(numbersWithDuplicates)]; // Using Set to remove duplicates
+console.log("Unique numbers:", uniqueNumbers); // [1, 2, 3, 4, 5]
 
-// // 19. Adding elements to the array
-// uniqueNumbers.push(6); // Adding a new element
-// console.log("After adding 6:", uniqueNumbers); // [1, 2, 3, 4, 5, 6]
+// 19. Adding elements to the array
+uniqueNumbers.push(6); // Adding a new element
+console.log("After adding 6:", uniqueNumbers); // [1, 2, 3, 4, 5, 6]
 
-// // 20. Removing an element from the array
-// const indexToRemove = uniqueNumbers.indexOf(3);
-// if (indexToRemove > -1) {
-//     uniqueNumbers.splice(indexToRemove, 1); // Remove element at index
-// }
-// console.log("After removing 3:", uniqueNumbers); // [1, 2, 4, 5, 6]
+// 20. Removing an element from the array
+const indexToRemove = uniqueNumbers.indexOf(3);
+if (indexToRemove > -1) {
+    uniqueNumbers.splice(indexToRemove, 1); // Remove element at index
+}
+console.log("After removing 3:", uniqueNumbers); // [1, 2, 4, 5, 6]
 
-// // Important Notes:
-// // - Using Set is a modern and efficient way to remove duplicates from an array.
-// // - The splice method can be used to remove elements at a specific index.
-// // - Always check if the index exists before removing to avoid errors.
+// Important Notes:
+// - Using Set is a modern and efficient way to remove duplicates from an array.
+// - The splice method can be used to remove elements at a specific index.
+// - Always check if the index exists before removing to avoid errors.
