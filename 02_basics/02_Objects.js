@@ -17,7 +17,7 @@ const jsUser = {
 
     mySymbool: "124", // This is a string, not a symbol type. The key 'mySymbool' is a string.
 
-    [mySymbool]: "124", // This key is a symbol. Symbols are unique and do not collide with other keys.
+    [mySymbool]: "MYKey", // This key is a symbol. Symbols are unique and do not collide with other keys.
 
     "location": "pune", // String key for location
     email: "amolkadam174@gmail.com", // Email key
@@ -25,6 +25,10 @@ const jsUser = {
     lastLoginDay: ["mon", "sat"], // Array of days for last login
 
 };
+
+console.log("Symbol key value:");
+console.log(jsUser[mySymbool]);
+console.log(typeof(jsUser[mySymbool]));
 
 // Ways to access object properties:
 

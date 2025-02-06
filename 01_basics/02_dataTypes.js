@@ -13,8 +13,6 @@ console.log("Amol Kadam");
 
 // code readability should be high
 
-
-
 let name = "Amol Kadam";
 let age = 24;
 let classN = true;
@@ -23,7 +21,7 @@ let classN = true;
 // Number => 1
 // bigint => 121728910
 // String => "AMl KAdma"
-//boolean => true/false
+// boolean => true/false
 // null  => standalone value 
 // undefined => value is not Define 
 // Symbol => unickness 
@@ -32,7 +30,7 @@ let classN = true;
 console.log(typeof ("amias"));
 console.log(typeof (null));
 console.log(typeof (undefined));
-
+console.log(typeof (12));
 console.log(Math.min(10, 20, -2, 239, 98));
 console.log(Math.max(10, 1001, 20, 239, 98));
 
@@ -76,7 +74,7 @@ console.log(`type of num3 :${typeof (num3)} \ntype of num4 ${typeof (num4)}`);
 
 let bigintvalue = 123456789012345678901234567890n;
 console.log(bigintvalue);
-console.log(typeof (bigintvalue));
+console.log(`type of bigint is ${typeof bigintvalue}`);
 
 let FullName = "Amol TUkkaram Kadam";
 
@@ -98,12 +96,13 @@ let undefinedValue;
 let undefindVal = undefined;
 
 console.log(`undefindVal = undefined  value is ${undefindVal} and typen is ${typeof (undefindVal)}`);
-console.log(`let undefinedValue; value is ${undefinedValue} and typen is ${typeof (undefinedValue)} `);
 
 
 let yourAge = Symbol(25);
 let yourAge2 = Symbol(25);
 
+console.log(`yourAge value is ${yourAge.description} `);
+console.log(`yourAge2 value is ${yourAge2.description} `)
 console.log(`yourAge value is ${yourAge.toString()} and type of yourAge is: ${typeof yourAge}`);
 console.log(`yourAge2 value is ${yourAge2.toString()} and type of yourAge2 is: ${typeof yourAge2}`);
 
@@ -118,8 +117,9 @@ console.log(`Comare is equal or not yourAge==yourAge2 : ${yourAge == yourAge2}`)
 
 // 1 Object
 
+console.clear();
 let obj1 = {
-    name: "obj amol kadma",
+    name: "Amol kadma",
     age: 45,
     place: "pune",
     isDevloper: true,
@@ -156,6 +156,7 @@ let tools = [
 
 
 console.table(skills);
+console.log(tools);
 console.table(skills[0]);
 console.table(skills[1]);
 console.table(skills[2]);
@@ -173,18 +174,20 @@ console.log(tools[2].age);
 console.log(tools[3].name);
 console.log(tools[3].age);
 
-console.log(tools);
 
-function greet(){
-  console.log("Hello Amoll");  
+function greet() {
+    console.log("Hello Amoll");
 }
+greet();
+greet();
 greet();
 
 let fun = function () {
     console.log("Function is colled ");
 }
+
 const fun2 = () => {
-console.log("using varable function is fun2");
+    console.log("using varable function is fun2");
 
 }
 fun();

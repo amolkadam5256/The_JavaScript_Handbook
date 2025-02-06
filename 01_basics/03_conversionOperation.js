@@ -15,7 +15,7 @@ console.log("null");
 console.log(`content value : ${scorenull}`);
 console.log(typeof (scorenull));
 
-scoret = Number("amol");
+scoret = Number("1");
 console.log(`scoret is : ${scoret}`);
 console.log(typeof scoret);
 
@@ -60,7 +60,7 @@ console.log(` string 5 - number 2 is ${"5"-2}`);
 console.log(` string 5 - string  2 is ${"5"-"2"}`);
 console.log(` string 5 - boolean  2 is ${"5"-true}`);
 console.log(` boolean 5 - string  2 is ${true-"5"}`);
-console.log(` string 5 - boolean  2 is ${"5"-true}`);
+console.log(` string 5 - boolean  2 is ${"5"-false}`);
 
 
 let num = 123;

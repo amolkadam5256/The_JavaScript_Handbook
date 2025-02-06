@@ -1,15 +1,14 @@
+"use strict"
 console.time("TIME");
 console.count("Count is ");
-"use strict"
+console.count("Count is ");
 
 let fullname = "Amol Tukaram Kadam";
 let age = 25;
 let place = "Pune";
 let field = "Devloper";
-console.count("Count is ");
 console.log("Amol Tukaram Kadam");
-console.log(`My Full name is :${fullname}`);
-console.info(`My Full name is :${fullname}`);
+console.log(`My Full name is :${fullname} and ${age} years old`);
 console.info(`Used to log informational messages. It is similar to console.log() but can be used to distinguish informational output.`);
 
 console.warn(`${fullname}`);
@@ -24,61 +23,76 @@ console.table(tab[2]);// pune
 console.table(tab[1]);// 25 
 
 console.table([{
-    "Fullname ": fullname, "age is ": age
+    "Fullname ": fullname, "age": age
 }]);
 
 // console.group();
-console.group("Group Start ");
-console.log("This is content console log 1");
-console.log("This is content console log 2");
-console.log("This is content console log 3");
+console.group("Order Processing Started");
+console.log("Order ID: #ORD12345");
+console.log("Customer: John Doe");
+
+console.group("Step 1: Payment Processing");
+console.log("Payment Method: Credit Card");
+console.log("Payment Status: Approved");
 console.groupEnd();
-console.log("After group end This is content after add");
 
-console.group("Outer Group");
-console.log("This is the outer group.");
-console.count("Count is ");
-console.group("Inner Group");
-console.log("This is the inner group.");
-console.groupEnd(); // Close the inner group
-
-console.log("Back to the outer group.");
-console.groupEnd(); // Close the outer group
-
-
-console.group("Group 1");
-console.log("In Group 1");
-console.groupEnd(); // Closes Group 1
-console.log("out are of Group");
-
-
-console.count("Count is ");
-console.groupCollapsed("group Collapsed is start");
-console.log("This group starts collapsed.");
+console.group("Step 2: Order Packaging");
+console.log("Items Packed: ✅");
+console.log("Shipping Label Generated: ✅");
 console.groupEnd();
-console.log("out are of Group Collapsed");
 
+console.group("Step 3:s Order Shipment");
+console.log("Courier: FedEx");
+console.log("Tracking Number: 987654321");
+console.groupEnd();
 
-console.log("Example of grouping :")
-console.group("User Data");
+console.log("Order Successfully Processed ✅");
+console.groupEnd(); 
+
+console.log("Thank you for shopping with us!");
+console.log();
+console.log();
+
+// Simulating a User Profile with Address and Order Data
+
+console.group("User Profile");
 console.log("User ID: 12345");
+
 console.group("Address Info");
-console.log("Street: Main St");
+console.log("Street: 123 Main St");
 console.log("City: Example City");
-console.groupEnd(); // Close address info
-console.groupEnd(); // Close user data
+console.log("Postal Code: 12345");
+console.groupEnd(); // End Address Info
+
+console.group("Order History");
+console.log("Order ID: 9876");
+console.log("Items Purchased: Laptop, Phone");
+console.log("Total Amount: $1200");
+console.groupEnd(); // End Order History
+
+console.groupEnd(); // End User Profile
+
+// Using console.count to track the number of times a user visits the profile page
+
+// Example of collapsed groups to hide details by default
+console.groupCollapsed("Sensitive Data (Collapsed)");
+console.log("Password: a*******");
+console.log("Security Question: Favorite color?");
+console.groupEnd(); // End Sensitive Data
+
+console.log("Exited from collapsed group.");
+
 
 console.log("Time is calculate any use to calculate time of tast taken by run  ")
+// console.time("TIME");
 // Purpose: Starts a timer to measure how long a specific block of code takes to execute.
 // Simulating a time-consuming task
 for (let i = 0; i < 10; i++) {
     console.log("My name is amol Kadam");
+    console.count("User Profile Visit Count:");
 }
 console.timeEnd("TIME");
 
-console.time("TIME");
-// Some operations here
-console.timeEnd("TIME");
 
 function firstFunction() {
     secondFunction();
@@ -88,10 +102,10 @@ function secondFunction() {
     console.trace("TRACE");
 }
 
-firstFunction();
-
+// firstFunction();
 
 console.count("Count is ");
+
 
 
 console.count(fullname);
@@ -110,11 +124,22 @@ console.count("COUNT");
 
 
 console.assert(3===3, "is equal");
-console.assert(2===3, "is Not equal");
+console.assert(2===1, "console.assert show if condition is false it will show message");
 
 console.clear();
 console.log("Console is clear using console.clear() method or logs ");
 
 //  02 data types pratice 
 
-console.log("Data Types pratice s");    
+// ther arew 8 data types in javascript
+// 1. Number
+// 2. String
+// 3. Boolean
+// 4. Undefined
+// 5. Null
+// 6. Object
+// 7. Symbol
+// 8. BigInt
+
+let number = 25;
+console.log("Data Types pratice ");    

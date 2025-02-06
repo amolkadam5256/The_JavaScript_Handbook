@@ -86,7 +86,7 @@ console.table(typeof (heros[2]));         // object (Arrays are of type object i
 console.table(typeof (heros[3]));         // object (Arrays are of type object in JavaScript)
 
 // Example 8: Object (Key-Value pairs)
-let myObj = {
+let myObj = {                              
     myName: "amol",
     age: 25,
 }

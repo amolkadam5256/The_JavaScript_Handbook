@@ -9,7 +9,7 @@ let accountEmail = "amolkadma1234";
 accountEmail = "amolkadam1274@gmail.com"
 var accountPassword = 776810;
 let accountCity = "pune";
-
+console.table([accountCity, accountEmail, accountPassword, accountId])
 console.table([
   { "account id": accountId, "email": accountEmail, "password": accountPassword, "city": accountCity }
 ]);
@@ -18,16 +18,16 @@ console.table([
 // Logs a general message to the console
 console.log("Log");
 
-// Logs an informational message to the console
+// info an informational message to the console
 console.info("INFO");
 
-// Logs a warning message to the console
+// WARM a warning message to the console
 console.warn("WARM");
 
-// Logs an error message to the console
+// error an error message to the console
 console.error("ERROR");
 
-// Logs a debug message (may not display in some browsers without enabling debug mode)
+// debug a debug message (may not display in some browsers without enabling debug mode)
 console.debug("DEBUG");
 
 // Displays data in a tabular format (useful for arrays or objects)
@@ -37,7 +37,7 @@ console.table([
 
 // Starts a new console group (indents logs until groupEnd is called)
 console.group("GROUP");
-
+console.groupEnd("GROUPEND");
 // Starts a new collapsed console group (requires clicking to expand)
 console.groupCollapsed("GROUPCOLLAPSED");
 
@@ -51,16 +51,20 @@ console.time("TIME");
 console.timeEnd("TIME");
 
 // Logs a stack trace to the console (shows the call stack leading to this point)
-console.trace("TRACE");
+// console.trace("TRACE");
 
-// Logs the number of times this line has been called with the same label
+// // Logs the number of times this line has been called with the same label
+console.count("COUNT");
 console.count("COUNT");
 
+console.log("Count is reset ");
 // Resets the count for the given label
-console.countReset("COUNTRESET");
-
+console.countReset("COUNT");
+console.count("COUNT");
+console.count("COUNT");
 // Logs an assertion failure if the condition is falsy
-console.assert(false, "ASSERT");
+console.assert(true, "ASSERT it dosen't show if condition is true it will  not show message");
+console.assert(false, "ASSERT it show if condition is false it will show message");
 
 // Clears the console (useful for cleaning up the output)
 console.clear("CLEAR");
