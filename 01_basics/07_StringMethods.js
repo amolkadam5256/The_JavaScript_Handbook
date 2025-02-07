@@ -21,11 +21,10 @@
     let str = "JavaScript";
     console.log(`Character at index 4: ${str.charAt(4)}`); // Output: S (character at index 4)
 }
-
 // charCodeAt() Method - Returns the Unicode (ASCII) value of the character at a specific index
 {
     let str = "JavaScript";
-    console.log(`Character code at index 0: ${str.charCodeAt(1)}`); // Output: 74 (Unicode of 'J')
+    console.log(`Character code at index 0: ${str.charCodeAt(0)}`); // Output: 74 (Unicode of 'J')
 }
 
 // at() Method - Returns the character at a specific index (similar to charAt but supports negative indices)
@@ -36,20 +35,21 @@
 
 // indexOf() Method - Finds the first occurrence of a substring
 {
-    let str = "Hello JavaScript";
-    console.log(`Index of 'Java': ${str.indexOf('Java')}`); // Output: 6
+    let str = "Hello Java Script";
+    console.log(`Hello Java Script Index of 'Script': ${str.indexOf('Script')}`); // Output: 6
 }
+
 
 // lastIndexOf() Method - Finds the last occurrence of a substring
 {
-    let str = "Hello JavaScript Java";
-    console.log(`Last index of 'Java': ${str.lastIndexOf('Java')}`); // Output: 17
+    let str = "Hello JavaScript and Java";
+    console.log(`Hello JavaScript Java is  Last index of 'Java': ${str.lastIndexOf('Java')}`); // Output: 17
 }
 
 // includes() Method - Checks if a string contains a specific substring
 {
     let str = "Hello JavaScript";
-    console.log(`Does the string include 'Java'? ${str.includes('Java')}`); // Output: true
+    console.log(`Hello JavaScript Does the string include 'Java'? ${str.includes('Java')}`); // Output: true
 }
 
 // startsWith() Method - Checks if a string starts with a specific substring
@@ -61,19 +61,21 @@
 // endsWith() Method - Checks if a string ends with a specific substring
 {
     let str = "JavaScript is awesome";
-    console.log(`Does the string end with 'awesome'? ${str.endsWith('awesome')}`); // Output: true
+    console.log(`Does the string end with 'some'? ${str.endsWith('some')}`); // Output: true
 }
 
 // slice() Method - Extracts a part of the string using start and end indices
 {
     let str = "JavaScript is awesome";
-    console.log(`Sliced string (0 to 10): ${str.slice(0, 10)}`); // Output: JavaScript
+    console.log(`Sliced string (0 to 5): ${str.slice(0, 5)}`); // Output: JavaScript
+    console.log(str);
 }
 
 // substring() Method - Similar to slice but does not support negative indices
 {
     let str = "JavaScript is awesome";
-    console.log(`Substring (0 to 10): ${str.substring(0, 10)}`); // Output: JavaScript
+    console.log(`Substring (0 to 5): ${str.substring(0, 5)}`); // Output: JavaScript
+    console.log(str);
 }
 
 // replace() Method - Replaces the first occurrence of a substring
@@ -84,8 +86,8 @@
 
 // replaceAll() Method - Replaces all occurrences of a substring
 {
-    let str = "Java Java Java";
-    console.log(`Replace all 'Java' with 'JS': ${str.replaceAll('Java', 'JS')}`); // Output: JS JS JS
+    let str = "Java Java Java sdf";
+    console.log(`Java Java Java sdf Replace all 'Java' with 'JS': ${str.replaceAll('Java', 'JS')}`); // Output: JS JS JS
 }
 
 // toUpperCase() Method - Converts a string to uppercase
@@ -116,27 +118,32 @@
 // split() Method - Splits a string into an array using a delimiter
 {
     let str = "JavaScript is awesome";
+    console.log(`str: ${str}`);
     console.log(`Split string by space: ${str.split(' ')}`); // Output: ['JavaScript', 'is', 'awesome']
+    console.log(`Split string by a: ${str.split('a')}`);
 }
 
 // match() Method - Finds matches using a regular expression
 {
-    let str = "JavaScript is awesome";
-    console.log(`Match 'Java': ${str.match(/Script/)}`); // Output: ['Java']
+    let str = "some JavaScript is  awesome";
+    console.log(`Match 'awesome': ${str.match(/some/g)}`); // Output: ['Java']
 }
+
 
 // repeat() Method - Repeats a string a specified number of times
 {
     let str = "JS";
-    console.log(`Repeat string 3 times: ${str.repeat(3)}`); // Output: JSJSJS
+    console.log(`Repeat string 3 times: ${str.repeat(7)}`); // Output: JSJSJS
 }
 
 // padStart() and padEnd() Methods - Pads a string with another string to a specified length
 {
-    let str = "5";
-    console.log(`Padded start: ${str.padStart(4, '0')}`); // Output: 0005
-    console.log(`Padded end: ${str.padEnd(4, '0')}`); // Output: 5000
+    let str = "s";
+    console.log(`Padded start: ${str.padStart(4, '0')}`); // Output: "000s"
+    console.log(`Padded end: ${str.padEnd(4, '0')}`); // Output: "s000"
+
 }
+console.log("====================================");
 
 // localeCompare() Method - Compares two strings lexicographically
 {
