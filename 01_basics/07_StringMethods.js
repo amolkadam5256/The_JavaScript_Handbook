@@ -25,7 +25,7 @@
 // charCodeAt() Method - Returns the Unicode (ASCII) value of the character at a specific index
 {
     let str = "JavaScript";
-    console.log(`Character code at index 0: ${str.charCodeAt(0)}`); // Output: 74 (Unicode of 'J')
+    console.log(`Character code at index 0: ${str.charCodeAt(1)}`); // Output: 74 (Unicode of 'J')
 }
 
 // at() Method - Returns the character at a specific index (similar to charAt but supports negative indices)

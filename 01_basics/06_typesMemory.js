@@ -4,11 +4,11 @@
 let myChinalName = "ApnaChinal"; // Stored in stack memory (primitive type)
 let anotherName = myChinalName;  // A copy of the value is created in stack memory
 
-console.log(myChinalName);        // Output: ApnaChinal
-console.log(typeof myChinalName); // Output: string
+console.log(`Value of myChinalName : ${myChinalName}`);        // Output: ApnaChinal
+console.log(`type of myChinalName  : ${typeof myChinalName}`); // Output: string
 
-console.log(anotherName);         // Output: ApnaChinal
-console.log(typeof anotherName);  // Output: string
+console.log(`after assin anotherName = myChinalName than value of anotherName :  ${anotherName}`);         // Output: ApnaChinal
+console.log(`after assin anotherName = myChinalName than value of myChinalName :  ${myChinalName}`);         // Output: ApnaChinal
 
 // Important Points:
 // 1. When we assign one primitive variable to another, it **copies the value**, not the reference.
@@ -25,29 +25,31 @@ let myObj = {
     age: 25,
 };
 
-console.log("myObj");      // Output: myObj (string)
+console.table(myObj);      // Output: myObj (string)
 console.log(myObj);        // Output: { myName: "Amol Kadam", age: 25 }
 console.log(myObj.myName); // Output: Amol Kadam
 console.log(myObj.age);    // Output: 25
 
 let anotherObj = myObj;   // Both variables now reference the same object in heap memory
 
-console.log("anotherObj"); // Output: anotherObj (string)
+console.log(`Fater assin anotherObj = myObj than value of anotherObj : ${anotherObj.myName} ${anotherObj.age}`);   
 console.log(anotherObj);   // Output: { myName: "Amol Kadam", age: 25 }
 console.log(anotherObj.myName); // Output: Amol Kadam
 console.log(anotherObj.age);    // Output: 25
 
+
+console.log(myObj===anotherObj);
 // Modifying the object through anotherObj
 anotherObj.myName = "Amit Kadam";
 anotherObj.age = 27;
 
 // myObj will reflect the changes because both variables point to the same object in heap memory
-console.log("myObj");      // Output: myObj (string)
+console.log(`after changing annotherobj myname and age in second object it will be change both  ` );      // Output: myObj (string)
+console.log(`myObj values : `);
 console.log(myObj);        // Output: { myName: "Amit Kadam", age: 27 }
 console.log(myObj.myName); // Output: Amit Kadam
 console.log(myObj.age);    // Output: 27
-
-console.log("anotherObj"); // Output: anotherObj (string)
+console.log(`anotherObj values : `);
 console.log(anotherObj);   // Output: { myName: "Amit Kadam", age: 27 }
 console.log(anotherObj.myName); // Output: Amit Kadam
 console.log(anotherObj.age);    // Output: 27
