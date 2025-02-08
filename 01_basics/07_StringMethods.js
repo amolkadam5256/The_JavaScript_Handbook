@@ -125,10 +125,9 @@
 
 // match() Method - Finds matches using a regular expression
 {
-    let str = "some JavaScript is  awesome";
-    console.log(`Match 'awesome': ${str.match(/some/g)}`); // Output: ['Java']
+    let str = "same JavaScript is  awesome";
+    console.log(`Match 'same JavaScript is  awesome': ${str.match(/a/g)}`); // Output: ['Java']
 }
-
 
 // repeat() Method - Repeats a string a specified number of times
 {
@@ -138,24 +137,25 @@
 
 // padStart() and padEnd() Methods - Pads a string with another string to a specified length
 {
-    let str = "s";
-    console.log(`Padded start: ${str.padStart(4, '0')}`); // Output: "000s"
-    console.log(`Padded end: ${str.padEnd(4, '0')}`); // Output: "s000"
 
+    let str = "s";
+    console.log(`Padded start: ${str.padStart(4, 'b')}`); // Output: "000s"
+    console.log(`Padded end: ${str.padEnd(4, '0')}`); // Output: "s000"
+    
 }
-console.log("====================================");
 
 // localeCompare() Method - Compares two strings lexicographically
 {
     let str1 = "apple";
     let str2 = "banana";
-    console.log(`Locale compare result: ${str1.localeCompare(str2)}`); // Output: -1 (apple comes before banana)
+    console.log(`Locale compare result: ${str2.localeCompare(str1)}`); // Output: -1 (apple comes before banana)
 }
 
 // toString() Method - Converts a string object to its primitive value
 {
-    let strObj = new String("Hello");
+    let strObj =123;
     console.log(`Primitive value: ${strObj.toString()}`); // Output: Hello
+    console.log(typeof(strObj));
 }
 
 // Additional Example: Finding Substrings
@@ -164,6 +164,7 @@ console.log("====================================");
     console.log(`Index of 'Tukaram': ${str.indexOf("Tukaram")}`); // Output: 5
     console.log(`Last index of 'a': ${str.lastIndexOf("a")}`); // Output: 17
 }
+console.log("====================================");
 
 /* Important Notes:
 1. String methods in JavaScript are case-sensitive.

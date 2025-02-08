@@ -3,7 +3,6 @@
 // ===============================
 
 // Number Properties: These are predefined properties of the Number object.
-
 // Number.MAX_VALUE: The largest possible number in JavaScript.
 console.log("Number.MAX_VALUE:", Number.MAX_VALUE);
 
@@ -52,6 +51,7 @@ console.log("Number.toPrecision(4):", num.toPrecision(4));
 
 // Number.toString(radix): Returns a string representing the number in the given base (radix).
 console.log("Number.toString(2):", num.toString(2));
+console.log("Number.toString(10):", num.toString(10));
 
 // ===============================
 // Math Methods and Properties
@@ -117,6 +117,7 @@ console.log("Math.hypot(3, 4):", Math.hypot(3, 4));
 
 // Math.log(value): Returns the natural logarithm (base e) of a number.
 console.log("Math.log(10):", Math.log(10));
+console.log("Math.log(102):", Math.log(102));
 
 // Math.log10(value): Returns the base-10 logarithm of a number.
 console.log("Math.log10(100):", Math.log10(100));

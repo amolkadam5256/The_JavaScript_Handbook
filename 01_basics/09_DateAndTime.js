@@ -1,14 +1,15 @@
-// JavaScript Date and Time - A comprehensive guide
+// JavaScript Date and Time - A Comprehensive Guide
 
 // 1. Creating a Date Object
 // Current Date and Time (local timezone)
+console.log("Time is money");
 let myDate = new Date();
 console.log("Current Date and Time: ", myDate);
-
 // Date with Specific Date and Time (ISO format)
 let specificDate = new Date('2025-01-21T10:00:00');
 console.log("Specific Date and Time: ", specificDate);
 
+console.log("============================");
 // Date from Timestamp (milliseconds since Jan 1, 1970)
 let timestampDate = new Date(1684680000000);
 console.log("Date from Timestamp: ", timestampDate);
@@ -23,15 +24,14 @@ console.log("ISO 8601 Format: ", myDate.toISOString());
 // Date Only String
 console.log("Date Only String: ", myDate.toDateString());
 
-// Localized Date String (browser's locale)
+// Localized Date and Time String
 console.log("Localized Date String: ", myDate.toLocaleDateString());
-
-// Localized Time String (browser's locale)
 console.log("Localized Time String: ", myDate.toLocaleTimeString());
+console.log("Localized Date-Time String: ", myDate.toLocaleString());
 
 // Extracting Date and Time Components
-console.log("Year: ", myDate.getFullYear()); // Year
-console.log("Month (0-11): ", myDate.getMonth()); // Month (0-indexed)
+console.log("Year: ", myDate.getFullYear());
+console.log("Month (0-11): ", myDate.getMonth());
 console.log("Day of the Month (1-31): ", myDate.getDate());
 console.log("Day of the Week (0-6, 0=Sunday): ", myDate.getDay());
 console.log("Hours (0-23): ", myDate.getHours());
@@ -51,66 +51,36 @@ console.log("UTC Minutes (0-59): ", myDate.getUTCMinutes());
 console.log("UTC Seconds (0-59): ", myDate.getUTCSeconds());
 
 // 3. Methods to Set Date and Time
-// Set Year
 myDate.setFullYear(2023);
-console.log("Set Year: ", myDate);
-
-// Set Month (0-11, 0 = January)
-myDate.setMonth(5); // June
-console.log("Set Month (June): ", myDate);
-
-// Set Day of the Month (1-31)
+myDate.setMonth(5);
 myDate.setDate(15);
-console.log("Set Day of the Month (15th): ", myDate);
-
-// Set Hour (0-23)
 myDate.setHours(10);
-console.log("Set Hour (10 AM): ", myDate);
-
-// Set Minute (0-59)
 myDate.setMinutes(30);
-console.log("Set Minutes (30): ", myDate);
-
-// Set Second (0-59)
 myDate.setSeconds(45);
-console.log("Set Seconds (45): ", myDate);
-
-// Set Millisecond (0-999)
 myDate.setMilliseconds(500);
-console.log("Set Milliseconds (500): ", myDate);
+console.log("Updated Date-Time: ", myDate);
 
 // 4. Custom Formatting of Date and Time
-
-// Custom Date Format (YYYY-MM-DD)
 let customFormat = `${myDate.getFullYear()}-${String(myDate.getMonth() + 1).padStart(2, '0')}-${String(myDate.getDate()).padStart(2, '0')}`;
 console.log("Custom Date Format (YYYY-MM-DD): ", customFormat);
 
-// Custom Date and Time Format (DD/MM/YYYY HH:MM:SS)
 let customDateTimeFormat = `${String(myDate.getDate()).padStart(2, '0')}/${String(myDate.getMonth() + 1).padStart(2, '0')}/${myDate.getFullYear()} ${String(myDate.getHours()).padStart(2, '0')}:${String(myDate.getMinutes()).padStart(2, '0')}:${String(myDate.getSeconds()).padStart(2, '0')}`;
-console.log("Custom Date and Time Format (DD/MM/YYYY HH:MM:SS): ", customDateTimeFormat);
+console.log("Custom Date-Time Format (DD/MM/YYYY HH:MM:SS): ", customDateTimeFormat);
 
-// Custom Weekday and Time Format
 const weekdays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 let customWeekdayTimeFormat = `${weekdays[myDate.getDay()]}, ${myDate.getHours()}:${String(myDate.getMinutes()).padStart(2, '0')}`;
-console.log("Custom Weekday and Time Format: ", customWeekdayTimeFormat);
+console.log("Custom Weekday-Time Format: ", customWeekdayTimeFormat);
 
 // 5. Important Notes on Date and Time Handling
-// Time Zone Considerations:
-// JavaScript works with the local time zone of the browser/device. Consider using libraries like Moment.js or date-fns for handling different time zones effectively.
-
-
-// Date Parsing Example
 let parsedDate = new Date('2025-01-21');
 console.log("Parsed Date (ISO 8601 format): ", parsedDate);
 
-// Example code to handle time zones:
-let utcDate = new Date(Date.UTC(2025, 0, 21, 10, 0, 0));  // Jan 21, 2025, 10:00 AM UTC
+let utcDate = new Date(Date.UTC(2025, 0, 21, 10, 0, 0));
 console.log("UTC Date: ", utcDate);
 console.log("UTC Date in ISO 8601 format: ", utcDate.toISOString());
 
-
-console.clear();
-const time = new Date;
+// Clearing Console and Reprinting Time Info
+const time = new Date();
 console.log(`${time.getDate()} hours  ${time.getUTCHours()}`);
 console.log(time.toString());
 console.log(time.toDateString());
@@ -122,29 +92,22 @@ console.log(time.toLocaleTimeString());
 console.log(time.toTimeString());
 console.log(time.toUTCString());
 
-
-// secon format 
-
-
+// Alternative Date Formats
 let dateForm = new Date(2025, 0, 23);
-let dateForm2 = new Date(2025, 0, 23, 5, 3)
-console.log(`${dateForm.toDateString()}`);
-console.log(`${dateForm2.toLocaleString()}`);
+let dateForm2 = new Date(2025, 0, 23, 5, 3);
+console.log(dateForm.toDateString());
+console.log(dateForm2.toLocaleString());
 
+// Unix Timestamp
+let myTimeStamp = Date.now();
+console.log(myTimeStamp);
+console.log(Math.floor(myTimeStamp / 1000));
 
-let myTimeStap = Date.now();
-console.log(myTimeStap);
-console.log(Math.floor(Date.now() / 1000));
-
-
+// Fixing Locale String Issue
 let aa = new Date();
-
 console.log(aa.getDay());
 console.log(aa.getDate());
 console.log(aa.getMonth());
-console.log(`Hello`);
+console.log("Hello");
 
-aa.toLocaleString('default', {
-    weekday: "long",
-    weekday: "short",
-})
+console.log(aa.toLocaleString('default', { weekday: "long" }));
