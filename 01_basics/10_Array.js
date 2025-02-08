@@ -36,7 +36,7 @@ const info = [
         country: "India"
     }
 ];
-
+console.log(typeof info);
 let arro=[1,2,3,4,5,6,7,8,9,10];
 console.log(typeof arro);
 // Display the entire info array in a table format
@@ -55,9 +55,9 @@ let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 arr.forEach(num => console.log(num)); // Using forEach for cleaner iteration
 
 
-let arr3= [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-arr3.forEach((num , index, arr3)=>{
-    console.log(`use of forEach index :${index} value : ${num} arr all items  ${arr3}`)
+let arr3= [0,1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+arr3.forEach((num , index)=>{
+    console.log(`use of forEach index :${index} value : ${num} `)
 })
 
 // Create an empty array with 5 undefined slots
