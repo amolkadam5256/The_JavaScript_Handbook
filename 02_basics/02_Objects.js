@@ -5,10 +5,6 @@
 
 // Object Literals: A way of defining an object in JavaScript using curly braces.
 
-const mySymbool = Symbol("key1"); // Symbols are unique and immutable. Ideal for defining keys that should not clash.
-
-console.log(mySymbool);
-
 // Creating an object with various properties including a Symbol key
 const jsUser = {
     name: "Amol", // Property with string key
