@@ -3,6 +3,16 @@ const tinderUser = new Object();
 console.log(tinderUser); // Output: {}
 console.log(typeof (tinderUser)); // Output: object (because 'tinderUser' is an object)
 
+tinderUser.id = 123;
+tinderUser.name = "Ram";
+tinderUser.password = "Demo";
+console.log(tinderUser);
+console.log(tinderUser.id);
+console.log(tinderUser.name);
+console.log(tinderUser.password);
+console.log("");
+
+
 // Creating an object using object literal notation
 const tiduser = {};
 console.log(tiduser); // Output: {}
@@ -14,6 +24,7 @@ tiduser.name = "Amol";
 tiduser.age = 22;
 console.log(tiduser); // Output: { id: 2201020103, name: 'Amol', age: 22 }
 
+console.log("");
 
 // ------------------- Nested Object Example -------------------
 
@@ -28,6 +39,10 @@ const regularUser = {
             firstName: "Amol",
             middleName: "Tukaram",
             lastName: "Kadam",
+        },
+        anotherFormat: {
+            firstName: "AnotherFrmatFirstname",
+            lastName:"AnotherFrmatLastName"
         }
     }
 };
@@ -43,11 +58,17 @@ console.log(regularUser.fullname.userFullName.firstName); // Output: Amol
 console.log(regularUser.fullname.userFullName.middleName); // Output: Tukaram
 console.log(regularUser.fullname.userFullName.lastName); // Output: Kadam
 
+console.log(regularUser.fullname.anotherFormat.firstName); // Output: Kadam
+console.log(regularUser.fullname.anotherFormat.lastName); // Output: Kadam
+
+console.log("");
+
 
 // ------------------- Optional Chaining -------------------
 
 // Optional chaining allows safely accessing nested properties without checking if the previous property exists.
 
+console.log("Optional chaining allows safely accessing nested properties without checking if the previous property exists.")
 console.log(regularUser?.fullname?.userFullName?.firstName); // Output: Amol (if the property exists, it returns the value)
 console.log(regularUser?.fullname?.userFullName?.middleName); // Output: Tukaram
 console.log(regularUser?.fullname?.userFullName?.lastName); // Output: Kadam
@@ -64,16 +85,19 @@ console.log(regularUser?.fullname?.userFullName?.nonExistingProperty); // Output
 const obj1 = { 1: "a", 2: "b" };
 const obj2 = { 3: "c", 4: "d" };
 
+console.log(obj1);
+console.log(obj2);
+
 // Merging obj1 and obj2 into obj3
-const obj3 = Object.assign({}, obj1, obj2);
-console.log(obj3); // Output: { 1: "a", 2: "b", 3: "c", 4: "d" }
+const obj3 = Object.assign({}, obj1, obj2 );
+console.log(` Merging obj1 and obj2 into obj3 :`, obj3); // Output: { 1: "a", 2: "b", 3: "c", 4: "d" }
 
 
 // ------------------- Spread Operator -------------------
 
 // The spread operator allows for spreading the properties of an object into another object.
 const obj4 = { ...obj1, ...obj2 };
-console.log(obj4); // Output: { 1: "a", 2: "b", 3: "c", 4: "d" }
+console.log(` this is use of spread operater :${JSON.stringify(obj4)}`); // Output: { 1: "a", 2: "b", 3: "c", 4: "d" }
 
 
 // ------------------- Array of Objects -------------------
@@ -86,12 +110,12 @@ const user = [{
 },
 {
     Id: 2,
-    name: "Amol",
+    name: "Amit",
     age: 24,
 },
 {
     Id: 3,
-    name: "Amol",
+    name: "Ajit",
     age: 26,
 }];
 

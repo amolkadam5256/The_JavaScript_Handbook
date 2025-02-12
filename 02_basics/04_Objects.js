@@ -14,8 +14,7 @@ const course = {
 const { name: courseName, duration, price, location, isOnline } = course;
 
 // console.log(name, duration, price, location, isOnline);``
-console.log(courseName, duration, price, location, isOnline); ``
-
+console.log(courseName, duration, price, location, isOnline);
 
 
 console.log(course.duration)
