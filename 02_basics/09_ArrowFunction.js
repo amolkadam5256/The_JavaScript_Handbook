@@ -1,0 +1,1 @@
+console.log("Arrow Function in Details ex ");

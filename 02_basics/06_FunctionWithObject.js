@@ -1,78 +1,59 @@
-function CalculateCarPrice(num1) {
-    return num1;
+// Function that simply returns the passed value
+function calculateCarPrice(price) {
+    return price;
 }
-console.log(CalculateCarPrice(1000000));
+console.log(calculateCarPrice(1000000)); // Output: 1000000
 
-// second example
-function CarPriceSpreed(...num1) {
-    return num1;
+// Function using rest parameters to collect multiple values into an array
+function carPriceSpread(...prices) {
+    return prices;
 }
+console.log(carPriceSpread(1000000, 1727, 656, 7, 3454, 345643));
+console.log(typeof carPriceSpread); // Output: function
 
-console.log(CarPriceSpreed(1000000, 1727, 656, 7, 3454, 345643));
-console.log(typeof CarPriceSpreed);
-
-// third example
-
-function CarPriceSpreed2(val1, val2, ...num1) {
-    return num1;
+// Function with fixed parameters and rest parameters
+function carPriceSpread2(firstValue, secondValue, ...remainingPrices) {
+    return remainingPrices; // Returns only the remaining values after first two
 }
+console.log(carPriceSpread2(1000000, 1727, 656, 7, 3454, 345643));
 
-console.log(CarPriceSpreed2(1000000, 1727, 656, 7, 3454, 345643));
-
-// fourth example
-function CarPriceSpreed3(val1, val2, ...num1) {
-    // return val1;
-    return val2;
-    // return val3; val3 is not defined
-    // return val4; val4 is not defined
+// Function demonstrating parameter selection
+function carPriceSpread3(firstValue, secondValue, ...remainingPrices) {
+    return secondValue; // Only returns second parameter
 }
+console.log(carPriceSpread3(1000000, 1727, 656, 7, 3454, 345643));
 
-console.log(CarPriceSpreed3(1000000, 1727, 656, 7, 3454, 345643));
-
-
-
-// fifth example
-
-// Define an object 'myCar' with properties: brand, model, and year
+// Define an object 'myCar' with properties
 const myCar = {
     brand: "Ford",
     model: "Mustang",
     year: 1969
 };
 
-// Function to return a string describing the car's details
-function myCarDetails(myobjCar) {
-    return `I have a  ${myobjCar.brand} ${myobjCar.year} ${myobjCar.model}`;
+// Function to return a formatted car description
+function myCarDetails(car) {
+    return `I have a ${car.brand} ${car.year} ${car.model}.`;
 }
-
-// Call the function with 'myobjCar' as the argument and log the result
 console.log(myCarDetails(myCar));
 
-// Function to return a string describing the car's details
-function myCarDetails2(car1) {
-    return `I have a ${car1.year} ${car1.brand} ${car1.model}`;
+// Another way to structure car details function
+function myCarDetails2(car) {
+    return `I have a ${car.year} ${car.brand} ${car.model}.`;
 }
-
-// Call the function with 'myCar' as the argument and log the result
 console.log(myCarDetails2(myCar));
 
-
-
+// Logging an object directly
 console.log({
     name: "Amol Tukaram Kadam",
     age: 26,
-    city: "Pune",
+    city: "Pune"
 });
 
+// Array containing numbers
+const myNewArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-myNewArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-
-
-function returnSecondValue(getArray) {
-    // return getArray[1];
-    // return getArray[2];
-    // return getArray[3];
-    return getArray[4];
+// Function returning a specific index value from an array
+function returnNthValue(array, index = 4) { // Default index is 4 (5th element)
+    return array[index];
 }
-
-console.log(returnSecondValue(myNewArray));
+console.log(returnNthValue(myNewArray)); // Output: 5
