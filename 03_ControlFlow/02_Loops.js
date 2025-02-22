@@ -32,11 +32,10 @@ for (let i = 1; i <= 10; i++) {
 console.log("-- Nested For Loop (Matrix Format) --");
 let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 for (let i = 0; i < arr.length; i++) {
-    let row = "";
     for (let j = 0; j < arr.length; j++) {
-        row += `(${arr[i]}, ${arr[j]}) `;
+        console.log(`(${arr[i]}, ${arr[j]}) `);
     }
-    console.log(row);
+    console.log();
 }
 
 // 3. REVERSE FOR LOOP - Iterates in reverse order.
@@ -48,15 +47,21 @@ for (let i = arr.length - 1; i >= 0; i--) {
 // 4. FOR...OF LOOP - Best for iterating over iterable elements.
 console.log("-- For...of Loop Example --");
 for (let num of arr) {
-    console.log(`Number: ${num}`);
+    console.log(`Number: ${num} * ${num} = ${num*num}`);
 }
 
 // 5. FOR...IN LOOP - Best for iterating over object properties.
 console.log("-- For...in Loop Example --");
+
+// Defining an object with key-value pairs
 let person = { name: "Amol", age: 25, city: "Pune" };
+
+// Using a for...in loop to iterate over the properties of the object
 for (let key in person) {
+    // Printing each key and its corresponding value
     console.log(`${key}: ${person[key]}`);
 }
+
 
 // 6. WHILE LOOP - Runs while the condition remains true.
 console.log("-- While Loop Example --");
@@ -72,7 +77,7 @@ let num = 1;
 do {
     console.log(`Number: ${num}`);
     num++;
-} while (num <= 5);
+} while (num >= 5);
 
 // 8. FOREACH LOOP - Calls a function for each array element.
 console.log("-- forEach Loop Example --");
@@ -99,7 +104,7 @@ let infiniteCount = 0;
 while (true) {
     console.log(`Infinite Count: ${infiniteCount}`);
     infiniteCount++;
-    if (infiniteCount === 3) break; // Exits when count reaches 3.
+    if (infiniteCount ===3) break; // Exits when count reaches 3.
 }
 
 // 11. LABELED LOOPS - Helps break/continue outer loops.
@@ -112,7 +117,7 @@ outerLoop: for (let i = 1; i <= 3; i++) {
         }
         console.log(`(${i}, ${j})`);
     }
-}
+ }
 
 // 12. OBJECT ITERATION EXAMPLE
 console.log("-- Object Iteration Example --");
