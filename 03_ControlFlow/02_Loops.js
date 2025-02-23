@@ -82,8 +82,25 @@ do {
 // 8. FOREACH LOOP - Calls a function for each array element.
 console.log("-- forEach Loop Example --");
 arr.forEach((value, index) => {
-    console.log(`Index: ${index}, Value: ${value}`);
+  console.log(`Index: ${index}, Value: ${value}`);
 });
+
+let demo = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+demo.forEach(function(item){
+    console.log(`ForEach ${item}`)
+});
+
+
+let students = [
+    { id: 1, name: "Amol", age: 22, marks: 85 },
+    { id: 2, name: "Priya", age: 21, marks: 90 },
+    { id: 3, name: "Rohan", age: 23, marks: 78 }
+];
+
+students.forEach((item)=>{
+    console.table(item);
+})
+console.table(students);
 
 // 9. MAP, FILTER, REDUCE - Higher-order functions.
 console.log("-- Map Example --");
