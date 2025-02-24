@@ -69,8 +69,22 @@ function accessAllDataFormatted(obj, indent = 0) {
     }
 }
 
-accessAllDataFormatted(person);
+console.log(person.projects[1].name);
+console.log(person.projects[1].description);
+console.log(person.projects[1].github);
+// accessAllDataFormatted(person);
 
+for(const key in person){
+    console.log(`${key} : ${person[key]}`)
+}
+
+const map = new Map();
+map.set("Ak", []);
+map.get("Ak").push("Amol kadam");
+map.get("Ak").push("New Value 1");
+map.get("Ak").push("New Value 2");
+
+console.log(map.get("Ak")); // Output: ['Amol kadam', 'New Value 1', 'New Value 2']
 
 // 2. Using for...in on an array (Not recommended, use forEach or for-of instead)
 const numbers = [10, 20, 30, 40, 50];
@@ -102,10 +116,13 @@ console.log(propertyToCheck + " exists: " + found);
 const parentObj = { a: 1, b: 2 };
 const childObj = Object.create(parentObj);
 childObj.c = 3;
-
+childObj.d = 6;
+for (let key in parentObj){
+console.log(`${key} : ${parentObj[key]}`)
+}
 for (let key in childObj) {
     if (childObj.hasOwnProperty(key)) {
-        console.log(key + ": " + childObj[key]);
+        console.log(`child ${key} : ${childObj[key]}`);
     }
 }
 
@@ -117,15 +134,23 @@ Object.keys(laptop).forEach(key => {
 
 // 7. Using for...in with Object.values()
 const student = { name: "Rahul", grade: "A", score: 95 };
-for (let value of Object.values(student)) {
+for (let value in Object.values(student)) {
     console.log(value);
 }
 
-// 8. Using for...in with Object.entries() - Getting key-value pairs
+for (let value in student) {
+    console.log(`${value} ${student[value]}`);
+}
+
 const employee = { id: 101, position: "Developer", salary: "₹50,000" };
-for (let [key, value] of Object.entries(employee)) {
+
+const entries = Object.entries(employee); // Converts object into an array of key-value pairs
+
+for (let index in entries) {
+    let [key, value] = entries[index]; // Extract key and value from each array element
     console.log(key + ": " + value);
 }
+
 
 // 9. Using for...in with nested objects
 const company = {
