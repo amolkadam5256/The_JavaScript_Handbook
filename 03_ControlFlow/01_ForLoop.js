@@ -61,8 +61,10 @@ for (let i = 1; i <= 5; i++) {
 }
 
 // 10. Looping over a string using for loop
-let str = "JAVASCRIPT";
+let str = "JAVASCRIPT With Amol Kadam";
 for (let i = 0; i < str.length; i++) {
+    if(str[i]===" ")continue;
+    if(str[i]==="a")break;
     console.log(str[i]); // Output: J A V A S C R I P T
 }
 

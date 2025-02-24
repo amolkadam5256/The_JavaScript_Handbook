@@ -32,8 +32,13 @@ do {
 
 // 5. Infinite do-while loop - Be careful! (Uncomment to run)
 // do {
-//     console.log("This is an infinite loop!");
+    console.log("This is an infinite loop!");
 // } while (true);
+
+// 5. Infinite do-while loop - Be careful! (Uncomment to run)
+do {
+    console.log("This is an infinite loop!");
+} while (false);
 
 // 6. Using break in do-while loop - Stops when condition is met
 let n = 1;

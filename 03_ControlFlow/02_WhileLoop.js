@@ -11,7 +11,7 @@ while (i <= 5) {
 
 // 2. Reverse while loop - Iterating from 10 to 1
 let j = 10;
-while (j >= 1) {
+while (j >= -21) {
     console.log(j); // Output: 10 9 8 ... 1
     j--;
 }
@@ -28,6 +28,10 @@ while (k <= 10) {
     console.log("This is an infinite loop!");
 // }
 
+while (false) {
+  console.log("This is an infinite loop!");
+}
+
 // 5. Using break in while loop - Stops when condition is met
 let m = 1;
 while (m <= 5) {
@@ -42,6 +46,7 @@ while (n <= 5) {
     if (n === 3) {
         n++; // Important: Increment before continue to prevent infinite loop
         continue;
+        // break;
     }
     console.log(n); // Output: 1 2 4 5
     n++;
