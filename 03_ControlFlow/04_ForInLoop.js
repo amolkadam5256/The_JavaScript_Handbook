@@ -152,26 +152,72 @@ for (let index in entries) {
 }
 
 
-// 9. Using for...in with nested objects
+console.log();
 const company = {
     name: "TechCorp",
     location: "Mumbai",
     employees: {
         CEO: "John",
         CTO: "Alex",
-        Developer: "Sam"
+        Developer: "Sam",
+        HR: {
+            first: "Amol",
+            second: "Amit",
+        },
     }
 };
+
+console.log("Hello")
 for (let key in company) {
     if (typeof company[key] === "object") {
-        console.log(key + ":");
+        console.log(`${key}:`);
         for (let subKey in company[key]) {
-            console.log("  " + subKey + ": " + company[key][subKey]);
+
+            if (typeof company[key][subKey] === "object") {
+                console.log(`  ${subKey}:`);
+                for (let itemKey in company[key][subKey]) {
+                    console.log(`    ${itemKey}: ${company[key][subKey][itemKey]}`);
+                }
+            } else {
+                console.log(`  ${subKey}: ${company[key][subKey]}`);
+            }
         }
     } else {
-        console.log(key + ": " + company[key]);
+        console.log(`${key}: ${company[key]}`);
+    }
+    
+
+}
+
+
+const organization = {
+    name: "TechCorp",
+    location: "Mumbai",
+    employees: {
+        CEO: "John",
+        CTO: "Alex",
+        Developer: "Sam",
+        HR: {
+            first: "Amol",
+            second: "Amit",
+        },
+    },
+};
+
+// Function to iterate over nested objects
+function printObject(obj, indent = "") {
+    for (let key in obj) {
+        if (typeof obj[key] === "object" && obj[key] !== null) {
+            console.log(`${indent}${key}:`);
+            printObject(obj[key], indent + "  "); // Recursively call for nested objects
+        } else {
+            console.log(`${indent}${key}: ${obj[key]}`);
+        }
     }
 }
+
+// printObject(organization);
+
 
 // =======================
 // Summary of Important Points:
