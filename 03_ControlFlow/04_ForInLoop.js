@@ -77,7 +77,7 @@ console.log(person.projects[1].github);
 for(const key in person){
     console.log(`${key} : ${person[key]}`)
 }
-
+    
 const map = new Map();
 map.set("Ak", []);
 map.get("Ak").push("Amol kadam");
@@ -227,3 +227,5 @@ function printObject(obj, indent = "") {
 // 4. `Object.keys()`, `Object.values()`, and `Object.entries()` provide alternative iteration methods.
 // 5. Works well for **nested objects** and property counting.
 // =======================
+
+

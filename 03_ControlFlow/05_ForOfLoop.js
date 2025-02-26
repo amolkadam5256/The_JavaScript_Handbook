@@ -16,6 +16,7 @@ for (let char of text) {
 
 // 3. Iterating over a Set (Unique values)
 const uniqueNumbers = new Set([1, 2, 3, 3, 4, 5]);
+console.log(uniqueNumbers);
 for (let value of uniqueNumbers) {
     console.log(value); // Output: 1 2 3 4 5 (removes duplicates)
 }
