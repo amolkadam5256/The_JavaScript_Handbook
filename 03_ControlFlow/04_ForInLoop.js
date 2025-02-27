@@ -77,7 +77,7 @@ console.log(person.projects[1].github);
 for(const key in person){
     console.log(`${key} : ${person[key]}`)
 }
-    
+
 const map = new Map();
 map.set("Ak", []);
 map.get("Ak").push("Amol kadam");
@@ -152,72 +152,26 @@ for (let index in entries) {
 }
 
 
-console.log();
+// 9. Using for...in with nested objects
 const company = {
     name: "TechCorp",
     location: "Mumbai",
     employees: {
         CEO: "John",
         CTO: "Alex",
-        Developer: "Sam",
-        HR: {
-            first: "Amol",
-            second: "Amit",
-        },
+        Developer: "Sam"
     }
 };
-
-console.log("Hello")
 for (let key in company) {
     if (typeof company[key] === "object") {
-        console.log(`${key}:`);
+        console.log(key + ":");
         for (let subKey in company[key]) {
-
-            if (typeof company[key][subKey] === "object") {
-                console.log(`  ${subKey}:`);
-                for (let itemKey in company[key][subKey]) {
-                    console.log(`    ${itemKey}: ${company[key][subKey][itemKey]}`);
-                }
-            } else {
-                console.log(`  ${subKey}: ${company[key][subKey]}`);
-            }
+            console.log("  " + subKey + ": " + company[key][subKey]);
         }
     } else {
-        console.log(`${key}: ${company[key]}`);
-    }
-    
-
-}
-
-
-const organization = {
-    name: "TechCorp",
-    location: "Mumbai",
-    employees: {
-        CEO: "John",
-        CTO: "Alex",
-        Developer: "Sam",
-        HR: {
-            first: "Amol",
-            second: "Amit",
-        },
-    },
-};
-
-// Function to iterate over nested objects
-function printObject(obj, indent = "") {
-    for (let key in obj) {
-        if (typeof obj[key] === "object" && obj[key] !== null) {
-            console.log(`${indent}${key}:`);
-            printObject(obj[key], indent + "  "); // Recursively call for nested objects
-        } else {
-            console.log(`${indent}${key}: ${obj[key]}`);
-        }
+        console.log(key + ": " + company[key]);
     }
 }
-
-// printObject(organization);
-
 
 // =======================
 // Summary of Important Points:
@@ -227,5 +181,3 @@ function printObject(obj, indent = "") {
 // 4. `Object.keys()`, `Object.values()`, and `Object.entries()` provide alternative iteration methods.
 // 5. Works well for **nested objects** and property counting.
 // =======================
-
-
