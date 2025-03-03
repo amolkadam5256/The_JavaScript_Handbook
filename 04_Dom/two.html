@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Element Creation</title>
+</head>
+<body>
+    <div id="container"></div>
+    <ul id="list"></ul>
+    <div id="existingDiv">Existing Div</div>
+    <h1 id="oldHeading">Old Heading</h1>
+    <div id="originalElement">Original Element</div>
+    
+    <script>
+        // Creating New Elements in HTML using DOM in JavaScript
+
+        // 1. Using document.createElement()
+        let para = document.createElement("p");
+        para.textContent = "This is a new paragraph.";
+        document.body.appendChild(para);
+
+        // 2. Using innerHTML
+        document.getElementById("container").innerHTML += "<p>New paragraph added!</p>";
+
+        // 3. Using insertAdjacentHTML()
+        document.getElementById("container").insertAdjacentHTML("beforeend", "<p>Inserted paragraph</p>");
+
+        // 4. Using appendChild()
+        let div = document.createElement("div");
+        div.textContent = "This is a new div.";
+        document.body.appendChild(div);
+
+        // 5. Using prepend()
+        let newItem = document.createElement("li");
+        newItem.textContent = "First Item";
+        document.getElementById("list").prepend(newItem);
+
+        // 6. Using insertBefore()
+        let newDiv = document.createElement("div");
+        newDiv.textContent = "Inserted before another element";
+        let referenceNode = document.getElementById("existingDiv");
+        document.body.insertBefore(newDiv, referenceNode);
+
+        // 7. Using replaceChild()
+        let newElement = document.createElement("h2");
+        newElement.textContent = "Replaced Heading";
+        let oldElement = document.getElementById("oldHeading");
+        document.body.replaceChild(newElement, oldElement);
+
+        // 8. Using cloneNode()
+        let original = document.getElementById("originalElement");
+        let clone = original.cloneNode(true);
+        clone.id = "newClone";
+        document.body.appendChild(clone);
+
+        // 9. Measuring Performance using console.time()
+        console.time("Element Creation");
+        for (let i = 0; i < 100; i++) {
+            let div = document.createElement("div");
+            div.textContent = `Item ${i}`;
+            document.body.appendChild(div);
+        }
+        console.timeEnd("Element Creation");
+
+        // 10. Using DocumentFragment for Efficient DOM Updates
+        let fragment = document.createDocumentFragment();
+        for (let i = 0; i < 100; i++) {
+            let div = document.createElement("div");
+            div.textContent = `Item ${i}`;
+            fragment.appendChild(div);
+        }
+        document.body.appendChild(fragment);
+    </script>
+</body>
+</html>
