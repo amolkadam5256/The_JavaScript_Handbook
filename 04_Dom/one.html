@@ -1,84 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DOM Selectors</title>
     <style>
-        .highlight { color: red; font-weight: bold; }
+      .highlight {
+        color: red;
+        font-weight: bold;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <h1 id="title">DOM Selectors Example</h1>
-        <p class="description">This is a paragraph.</p>
-        <p class="description">Another paragraph.</p>
-        <ul id="list">
-            <li class="item">Item 1</li>
-            <li class="item">Item 2</li>
-            <li class="item">Item 3</li>
-        </ul>
-        <button onclick="changeText()">Change Text</button>
+      <h1 id="title">DOM Selectors Example</h1>
+      <p class="description">This is a paragraph.</p>
+      <p class="description">Another paragraph.</p>
+    <ul id="list">
+        <li class="item">Item 1</li>
+        <li class="item">Item 2</li>
+        <li class="item">Item 3</li>
+      </ul>
+      <button onclick="changeText()">Change Text</button>
     </div>
 
     <script>
-        // Select by ID
-        let title = document.getElementById("title");
-        title.style.color = "blue";
+      // Select by ID
+      let title = document.getElementById("title");
+      title.style.color = "red";
+      title.style.backgroundColor = "black";
 
-        // Select by Class Name
-        let descriptions = document.getElementsByClassName("description");
-        descriptions[0].style.fontSize = "18px";
+      // Select by Class Name
+      let descriptions = document.getElementsByClassName("description");
+      descriptions[0].style.fontSize = "38px";
+      descriptions[indexvalue].style.fontSize = "38px";
 
-        // Select by Tag Name
-        let listItems = document.getElementsByTagName("li");
-        listItems[1].style.color = "green";
+      // Select by Tag Name
+      let listItems = document.getElementsByTagName("li");
+      listItems[1].style.color = "red";
 
-        // Select first element by Query Selector
-        let firstItem = document.querySelector(".item");
-        firstItem.style.backgroundColor = "yellow";
+      // Select first element by Query Selectorf
+      let firstItem = document.querySelector(".item");
+      firstItem.style.backgroundColor = "yellow";
 
-        // Select all elements by Query Selector All
-        let allItems = document.querySelectorAll(".item");
-        allItems.forEach(item => item.style.border = "1px solid black");
+      // Select all elements by Query Selector All
+      let allItems = document.querySelectorAll(".item");
+      allItems.forEach((item) => (item.style.border = "1px solid black"));
 
-        // Parent Element Traversal
-        let parentDiv = title.parentElement;
-        console.log("Parent Element: ", parentDiv);
+      // Parent Element Traversal
+      let parentDiv = title.parentElement;
+      console.log("Parent Element: ", parentDiv);
 
-        // First Child Element
-        let firstChild = parentDiv.firstElementChild;
-        console.log("First Child: ", firstChild);
+      // First Child Element
+      let firstChild = parentDiv.firstElementChild;
+      console.log("First Child: ", firstChild);
 
-        // Last Child Element
-        let lastChild = parentDiv.lastElementChild;
-        console.log("Last Child: ", lastChild);
+      // Last Child Element
+      let lastChild = parentDiv.lastElementChild;
+      console.log("Last Child: ", lastChild);
 
-        // Next Sibling
-        let nextSibling = firstChild.nextElementSibling;
-        console.log("Next Sibling: ", nextSibling);
+      // Next Sibling
+      let nextSibling = firstChild.nextElementSibling;
+      console.log("Next Sibling: ", nextSibling);
 
-        // Previous Sibling
-        let prevSibling = lastChild.previousElementSibling;
-        console.log("Previous Sibling: ", prevSibling);
+      // Previous Sibling
+      let prevSibling = lastChild.previousElementSibling;
+      console.log("Previous Sibling: ", prevSibling);
 
-        // Selecting and modifying text content
-        function changeText() {
-            title.innerText = "Text Changed!";
-            title.classList.add("highlight");
-        }
+      // Selecting and modifying text content
+      function changeText() {
+        title.innerText = "Text Changed!";
+        title.classList.add("highlight");
+      }
 
-        // Selecting children of an element
-        let list = document.getElementById("list");
-        let children = list.children;
-        console.log("Children of List: ", children);
+      // Selecting children of an element
+      let list = document.getElementById("list");
+      let children = list.children;
+      console.log("Children of List: ", children);
 
-        // Selecting first and last child directly
-        console.log("First Child of List: ", list.firstElementChild);
-        console.log("Last Child of List: ", list.lastElementChild);
+      // Selecting first and last child directly
+      console.log("First Child of List: ", list.firstElementChild);
+      console.log("Last Child of List: ", list.lastElementChild);
 
-        // Traversing all child nodes (includes text nodes)
-        console.log("All Child Nodes: ", list.childNodes);
+      // Traversing all child nodes (includes text nodes)
+      console.log("All Child Nodes: ", list.childNodes);
     </script>
-</body>
+  </body>
 </html>
