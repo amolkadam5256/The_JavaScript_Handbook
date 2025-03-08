@@ -1,26 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pratce Of Dom Manipulation</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dom</title>
 </head>
-<body>
 
-    <h1 id="title" class="heading">Hello Everyone We are learning DOM </h1>
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia, delectus. Necessitatibus, error?</p>
+<body style="background-color: black; color: white">
+    <h1>DOM WITH CHAI WITH CODE</h1>
 
-    <div>
-        <h2>Hello List </h2>
-        <ul class="list">
-            <li class="listitem">Hello 1</li>
-            <li class="listitem">Hello 2</li>
-            <li class="listitem">Hello 3</li>
-            <li class="listitem">Hello 4</li>
-            <li class="listitem">Hello 5</li>
-        </ul>
+    <div class="parent">
+        <div class="day">Sunday</div>
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+        <div class="day">Friday</div>
+        <div class="day">Saturday</div>
     </div>
+
+    <div id="container">
+        <!-- The new element will be added here -->
+         <p>This <mark>red</mark> line is Create element inside the div tag</p>
+
+    </div>
+
     <script>
-    </script>
+        let parent = document.querySelector(".parent");
+        // console.log(parent);
+        // console.log(parent.children);
+        // console.log(parent.children[2].innerHTML);
+        // console.log(parent.children[1].innerHTML);
+
+        for (let i = 0; i < parent.children.length; i++) {
+            console.log(parent.children[i].innerHTML);
+        }
+
+        parent.children[1].style.color = "red";
+        parent.children[6].innerHTML = "<h1>HEllo</h1>";
+
+        console.log(parent.firstElementChild);
+            console.log(parent.firstElementChild.innerText);
+        console.log(parent.firstElementChild.innerHTML);
+
+        let fisrDay = document.querySelector(".day");
+        // console.log(fisrDay);
+
+        let allDay = document.querySelectorAll(".day");
+        // console.log(allDay[2].innerHTML);
+
+        console.log(fisrDay.parentElement);
+        console.log(fisrDay.nextElementSibling);
+
+        console.log("NODES: ", parent.childNodes);
+
+        // create element
+
+        const div = document.createElement("div");
+        console.log(div);
+        div.className = "MainDiv";
+        div.id = "MainDiv";
+        div.style.backgroundColor = "green";
+        div.style.fontSize="20px"
+        const nodeText = document.createTextNode("Hello My Name is Amol Kadam");
+        div.appendChild(nodeText);
+        document.body.appendChild(div);
+
+
+
+        const heading = document.createElement("h1");
+        console.log(heading);
+        heading.className="SubHeading";
+        heading.id="head";
+        heading.setAttribute("title","Make mony");
+        let demohead = document.createTextNode("Welcome to My Home ");
+        heading.appendChild(demohead);
+        document.body.appendChild(heading);
+
+
+
+        let mainDiv = document.getElementById("container");
+        console.log(mainDiv)
+
+        let newElement = document.createElement("h2");
+
+        newElement.textContent="Hello new Element ";
+
+        mainDiv.appendChild(newElement)
+        
+        
+        let img = document.createElement("img");
+        img.src = "./download.png"
+        img.alt = "Robot Img "
+        
+        mainDiv.appendChild(img)
+        
+        </script>
 </body>
+
 </html>
