@@ -6,6 +6,7 @@
     <title>DOM Element Creation</title>
 </head>
 <body>
+
     <div id="container"></div>
     <ul id="list"></ul>
     <div id="existingDiv">Existing Div</div>
@@ -17,8 +18,13 @@
 
         // 1. Using document.createElement()
         let para = document.createElement("p");
-        para.textContent = "This is a new paragraph.";
+        para.textContent = "This is a new paragraphamols";
         document.body.appendChild(para);
+
+
+        let heading = document.createElement("h1");
+        heading.textContent="Hi My Name Is Amol !";
+        document.body.appendChild(heading); 
 
         // 2. Using innerHTML
         document.getElementById("container").innerHTML += "<p>New paragraph added!</p>";
@@ -28,23 +34,23 @@
 
         // 4. Using appendChild()
         let div = document.createElement("div");
-        div.textContent = "This is a new div.";
+        div.textContent = "This is a new div. amol";
         document.body.appendChild(div);
 
         // 5. Using prepend()
         let newItem = document.createElement("li");
-        newItem.textContent = "First Item";
+        newItem.textContent = "First amol kadam";
         document.getElementById("list").prepend(newItem);
 
         // 6. Using insertBefore()
-        let newDiv = document.createElement("div");
+        let newDiv = document.createElement("h1")   ;
         newDiv.textContent = "Inserted before another element";
-        let referenceNode = document.getElementById("existingDiv");
+        let referenceNode = document.getElementById("container");
         document.body.insertBefore(newDiv, referenceNode);
 
         // 7. Using replaceChild()
         let newElement = document.createElement("h2");
-        newElement.textContent = "Replaced Heading";
+        newElement.textContent = "Replaced Heading alls";
         let oldElement = document.getElementById("oldHeading");
         document.body.replaceChild(newElement, oldElement);
 

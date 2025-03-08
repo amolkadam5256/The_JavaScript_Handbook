@@ -16,7 +16,7 @@
       <h1 id="title">DOM Selectors Example</h1>
       <p class="description">This is a paragraph.</p>
       <p class="description">Another paragraph.</p>
-    <ul id="list">
+      <ul id="list">
         <li class="item">Item 1</li>
         <li class="item">Item 2</li>
         <li class="item">Item 3</li>
@@ -33,7 +33,6 @@
       // Select by Class Name
       let descriptions = document.getElementsByClassName("description");
       descriptions[0].style.fontSize = "38px";
-      descriptions[indexvalue].style.fontSize = "38px";
 
       // Select by Tag Name
       let listItems = document.getElementsByTagName("li");
@@ -45,7 +44,7 @@
 
       // Select all elements by Query Selector All
       let allItems = document.querySelectorAll(".item");
-      allItems.forEach((item) => (item.style.border = "1px solid black"));
+        allItems.forEach((item) => (item.style.border = "1px solid black"));
 
       // Parent Element Traversal
       let parentDiv = title.parentElement;
