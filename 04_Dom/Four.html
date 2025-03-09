@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Edit and Delete DOM Object</title>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100%;
+            width: 100%;
+            background-color: black;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            color: white;
+            padding: 20px;
+        }
+
+        .heading {
+            font-size: 30px;
+            padding: 20px 0px;
+        }
+
+        .language-list {
+            padding: 10px 100px;
+            display: inline-flex;
+            flex-wrap: wrap;
+            border: 2px solid red;
+        }
+
+        .language-item {
+            list-style-type: lower-roman;
+            padding: 8px 18px;
+            background-color: rgba(241, 237, 237, 0.4);
+            margin: 10px 20px;
+        }
+
+        .button-heading {
+            font-size: 30px;
+            padding: 20px 0px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="main-title">Welcome to DOM Add Delete Update Practice</h1>
+
+    <div class="FirstDiv" id="languagePanal">
+        <h2 class="heading">List of Languages:</h2>
+        <ul class="language-list">
+            <li class="language-item">HTML</li>
+            <li class="language-item">CSS</li>
+            <li class="language-item">JavaScript</li>
+            <li class="language-item">SASS</li>
+        </ul>
+    </div>
+
+    <h2 class="button-heading">DOM Add Delete Update Button</h2>
+
+    <script>
+
+        // add img with  style 
+
+        function insertImageText(imgSrc, placeholderText) {
+            const imageElement = document.createElement("img");
+            imageElement.src = imgSrc;
+            imageElement.alt = placeholderText;
+            imageElement.style.width = "500px";
+            imageElement.style.display = "block";
+            imageElement.style.margin = "10px 0";
+            const heading = document.querySelector(".FirstDiv");
+            heading.before(imageElement);
+        }
+
+        // add list item with basic mehod
+        function addLang(langInput) {
+            const li = document.createElement("li");
+            li.textContent = langInput;
+            li.className = "language-item";
+            document.querySelector(".language-list").appendChild(li);
+        }
+        
+        // add list item with using CreateTextNode
+
+        function appendLanguageWithTextNode(languageName) {
+            const listItem = document.createElement("li");
+            listItem.appendChild(document.createTextNode(languageName));
+            listItem.className = "language-item";
+            document.querySelector(".language-list").appendChild(listItem);
+        }
+
+        // call functions 
+
+        insertImageText("./lang.jpg", "language img");
+        addLang("Demo");
+        appendLanguageWithTextNode("DBMS");
+
+
+        // Edit languageName 
+        
+    </script>
+</body>
+
+</html>
