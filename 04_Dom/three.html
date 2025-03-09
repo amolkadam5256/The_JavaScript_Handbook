@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit and Delete DOM Element</title>
+</head>
+
+<body style="background-color: black; color: white;">
+
+    <h1>DOM EDIT AND DELETE ELEMENT</h1>
+
+    <ul class="lang">
+        <li>JAVA</li>
+        <li>JavaScript</li>
+        <!-- <li>C</li> -->
+    </ul>
+
+    <script>
+        function addLang(item) {
+            const li = document.createElement("li");
+            li.textContent = item;
+            document.querySelector(".lang").appendChild(li);
+        }
+
+        function editLang(oldItem, newItem) {
+            const items = document.querySelectorAll(".lang li");
+            items.forEach(li => {
+                if (li.textContent.trim() === oldItem) {
+                    li.textContent = newItem;
+                }
+            });
+        }
+
+        function deleteLang(item) {
+            const items = document.querySelectorAll(".lang li");
+            items.forEach(li => {
+                if (li.textContent.trim() === item) {
+                    li.remove();
+                }
+            });
+        }
+
+        // Example Usage
+        addLang("SQL");
+        addLang("MYSQL");
+        addLang("C");
+        editLang("C", "C++");  // Replaces "C" with "C++"
+        deleteLang("JavaScript"); // Removes "JavaScript"
+    </script>
+
+</body>
+
+</html>
