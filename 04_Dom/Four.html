@@ -103,8 +103,33 @@
         appendLanguageWithTextNode("DBMS");
 
 
-        // Edit languageName 
+            // Edit languageName 
         
+        function editLang(oldItem , newItem){
+            document.querySelectorAll(".language-list li").forEach(li=>{
+                if (li.textContent.trim() === oldItem){
+                    li.textContent = newItem;
+                }
+            });
+        }
+        editLang("DBMS", "NAV");
+
+    // remove languageName
+        function removeLang(langInput){
+            document.querySelectorAll(".language-list li").forEach(li=>{
+                if(li.textContent===langInput){
+                    li.remove();
+                }
+                else{
+                    console.log("Item is not found");
+                }
+                
+            })
+        }
+
+        removeLang("DBMS")
+        removeLang("NAV")
+
     </script>
 </body>
 
