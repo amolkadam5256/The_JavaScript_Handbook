@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ColorCrafter - Color Changer App</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <h1 class="app-title">Welcome to ColorCrafter</h1>
+    
+    <div class="color-changer-container">
+        <div class="color-picker-group">
+            <h2 class="color-label">Select Background Color:</h2>
+            <input type="color" id="backgroundColorPicker" class="color-input">
+        </div>
+
+        <div class="color-picker-group">
+            <h2 class="color-label">Select Text Color:</h2>
+            <input type="color" id="textColorPicker" class="color-input">
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgp-HBxgNtQlmynY5p1atocfZ9tyLQSndCig&s" alt="Dummy Image" class="card-image">
+        <div class="card-content">
+            <h3 class="card-title">Creative Card</h3>
+            <p class="card-text">This is a sample card with a hover effect. Customize it to match your theme!</p>
+            <button class="card-button">Explore</button>
+        </div>
+    </div>
+
+    <div class="button-container">
+        <button class="apply-button" onclick="changeBgColor()">Apply Background</button>
+        <button class="apply-button" onclick="changeTextColor()">Apply Text</button>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
