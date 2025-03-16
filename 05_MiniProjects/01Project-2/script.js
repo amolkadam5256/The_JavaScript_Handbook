@@ -1,2 +1,0 @@
-// lorem
-console.log("Welcome !");
