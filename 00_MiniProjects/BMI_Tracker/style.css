@@ -1,0 +1,209 @@
+/* Reset default styles */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Smooth scrolling effect */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Centering content */
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    color: white;
+    text-align: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #000;
+}
+
+/* Remove default styles */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Remove borders and add smooth transitions */
+button, input, textarea {
+    border: none;
+    outline: none;
+    font-family: inherit;
+    cursor: pointer;
+    background: none;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Main BMI container */
+.bmi-container {
+    background: rgba(255, 255, 255, 0.2);
+    width: 70%;
+    max-width: 500px;
+    border-radius: 20px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+/* Title */
+.title {
+    font-size: 28px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    animation: slideDown 1s ease-in-out;
+}
+
+/* Input section */
+.input-section {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.input-box {
+    position: relative;
+    display: inline-block;
+    flex-direction: column;
+    gap: 5px;
+    text-align: left;
+    padding: 5px;
+}
+
+.input-box label {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+}
+
+/* Second input styling */
+.second-input {
+    position: relative;
+    font-size: 14px;
+    margin-top: 15px;
+    display: inline-block;
+    --field-padding: 12px;
+}
+
+.second-input input {
+    width: 100%;
+    padding: var(--field-padding);
+    border: 2px solid #aaa;
+    border-radius: 4px;
+    outline: none;
+    transition: border-color 0.3s ease;
+    background: #fff;
+    font-size: 16px;
+}
+
+.second-input input:focus {
+    border-color: #007bff;
+}
+
+.second-input .placeholder {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #aaa;
+    transition: all 0.3s ease;
+    font-size: 14px;
+    pointer-events: none;
+}
+
+.second-input input:focus + .placeholder,
+.second-input input:not(:placeholder-shown) + .placeholder {
+    top: 5px;
+    font-size: 10px;
+    color: #007bff;
+    background: #fff;
+    padding: 0 5px;
+}
+
+/* Button Container */
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+#calculate-btn {
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    background: #007bff;
+    color: white;
+    border-radius: 5px;
+    transition: background 0.3s ease-in-out;
+}
+
+#calculate-btn:hover {
+    background: #0056b3;
+}
+
+/* Result Section */
+.result {
+    margin-top: 15px;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#bmi-result {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+#bmi-category {
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+
+.bmi-info {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.bmi-columns {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.bmi-column {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .bmi-container {
+        width: 90%;
+        padding: 20px;
+    }
+}

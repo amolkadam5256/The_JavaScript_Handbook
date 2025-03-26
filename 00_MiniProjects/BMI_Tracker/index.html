@@ -3,11 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BMI_Tracker</title>
-    <link href="./src/output.css" rel="stylesheet">
+    <title>BMI Tracker - Calculate Your Body Mass Index</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-    <body class="bg-red-500">
-        <h1 class="text-white text-3xl font-bold">Test Tailwind</h1>
-      </body>
-      
+<body>
+
+    <div class="bmi-container">
+        <h1 class="title">BMI Tracker</h1>
+
+        <div class="input-section">
+            <div class="input-box">
+                <label for="height">Height in CM:</label>
+                <div class="second-input">
+                    <input type="text" id="height" placeholder=" ">
+                    <span class="placeholder">Enter height in cm</span>
+                </div>
+            </div>
+
+            <div class="input-box">
+                <label for="weight">Weight in KG:</label>
+                <div class="second-input">
+                    <input type="text" id="weight" placeholder=" ">
+                    <span class="placeholder">Enter weight in kg</span>
+                </div>
+            </div>
+
+            <div class="button-container">
+                <button id="calculate-btn">Calculate</button>
+            </div>
+
+            <!-- Result Section -->
+            <div class="result-container">
+                <h2>Result</h2>
+                
+                <p>Your BMI: <span id="bmi-result"></span></p>
+                <p>Category: <span id="bmi-category"></span></p>
+            </div>
+
+            <!-- Important BMI Categories -->
+            <div class="bmi-info">
+                <h3>BMI Categories</h3>
+                <div class="bmi-columns">
+                    <ul class="bmi-column">
+                        <li><strong>Underweight:</strong> BMI less than 18.5</li>
+                        <li><strong>Normal Weight:</strong> BMI 18.5 - 24.9</li>
+                    </ul>
+                    <ul class="bmi-column">
+                        <li><strong>Overweight:</strong> BMI 25 - 29.9</li>
+                        <li><strong>Obese:</strong> BMI 30 and above</li>
+                    </ul>
+                </div>
+            </div>
+            
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
 </html>
