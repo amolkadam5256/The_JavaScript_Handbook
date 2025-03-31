@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Events & CSS Styling</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        h1 {
+            padding: 20px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 10px;
+            transition: background 0.3s ease;
+        }
+        h1:hover {
+            background-color: #45a049;
+        }
+        h2 {
+            cursor: pointer;
+            color: #333;
+        }
+        button {
+            background-color: #008CBA;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px;
+            transition: background 0.3s ease;
+        }
+        button:hover {
+            background-color: #005f73;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        #toggle {
+            background-color: #007bff;
+            color: white;
+        }
+
+        #toggle:hover {
+            background-color: #0056b3;
+        }
+
+        #content2 {
+            display: none;
+            margin-top: 20px;
+            padding: 15px;
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        #content {
+            display: none;
+            background-color: white;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 id="heading" onclick="demo1()" ondblclick="demo2()">EVENTS IN JAVASCRIPT</h1>
+    <h2 id="demo2" ondblclick="demo2()">HELLO WELCOME TO ON CLICK FUNCTION OR EVENTS</h2>
+
+    <button id="addEvent">Click Me</button>
+    <button id="btn2">DOM Manipulation Event</button>
+    <button id="show">Show Content</button>
+
+    <div id="content" style="display: none;">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque, aliquid praesentium. Labore, sapiente eius pariatur sunt nam numquam, quibusdam tempore commodi, cupiditate praesentium consectetur consequuntur accusantium fuga harum quisquam delectus?
+        <button id="hide">Hide Content</button>
+    </div>
+
+    <button id="toggle">Toggle Content</button>
+
+    <div id="content2">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, aliquid praesentium. Labore, sapiente eius pariatur sunt nam numquam, quibusdam tempore commodi, cupiditate praesentium consectetur consequuntur accusantium fuga harum quisquam delectus?</p>
+    </div>
+    <p>Change bagroun color </p>
+    <button id="toggleBtn">White</button>
+
+    <button id="pressme">PressMe</button>
+
+    <script src="./script.js"></script>
+</body>
+</html>
