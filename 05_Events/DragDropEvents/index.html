@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Garbage Collection Game</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background-color: #e3f2fd;
+        }
+        .playground {
+            width: 100%;
+            height: 500px;
+            border: 2px solid #000;
+            position: relative;
+            background-image: url('playground.jpg');
+            background-size: cover;
+        }
+        .garbage {
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            cursor: grab;
+        }
+        .dustbin {
+            width: 100px;
+            height: 150px;
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            background-image: url('./dustbin.jpg');
+            background-size: cover;
+            border: 2px dashed #000;
+        }
+        .grass {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            background-image: url('grass.jpg');
+            background-size: cover;
+        }
+        .grass1 { bottom: 0; left: 50px; }
+        .grass2 { bottom: 0; left: 300px; }
+        .grass3 { bottom: 0; right: 100px; }
+    </style>
+</head>
+<body>
+    <h1>Garbage Collection Game</h1>
+    <p>Drag the garbage and drop it into the dustbin!</p>
+    
+    <div class="playground">
+        <img src="banana_peel.png" class="garbage" id="banana1" draggable="true" style="top:50px; left:80px;">
+        <img src="banana_peel.png" class="garbage" id="banana2" draggable="true" style="top:120px; left:300px;">
+        <img src="plastic_bottle.jpg" class="garbage" id="bottle1" draggable="true" style="top:200px; left:500px;">
+        <img src="plastic_bottle.jpg" class="garbage" id="bottle2" draggable="true" style="top:320px; left:50px;">
+        <img src="paper.jpg" class="garbage" id="paper1" draggable="true" style="top:400px; left:200px;">
+        <img src="paper.jpg" class="garbage" id="paper2" draggable="true" style="top:250px; left:600px;">
+        
+        <div class="dustbin" id="dustbin"></div>
+        <div class="grass grass1" draggable="false"></div>
+        <div class="grass grass2" draggable="false"></div>
+        <div class="grass grass3" draggable="false"></div>
+    </div>
+    
+    <script>
+        let garbageItems = document.querySelectorAll('.garbage');
+        let dustbin = document.getElementById('dustbin');
+        
+        garbageItems.forEach(item => {
+            item.addEventListener("dragstart", (event) => {
+                event.dataTransfer.setData("text", event.target.id);
+                // event.target.style.display="none";
+            });
+        });
+        
+        dustbin.addEventListener("dragover", (event) => {
+            event.preventDefault();
+        });
+        
+        dustbin.addEventListener("dragenter", () => {
+            dustbin.style.borderColor = "green";
+            dustbin.style.borderWidth = "10px";
+        });
+        
+        dustbin.addEventListener("dragleave", () => {
+            dustbin.style.borderColor = "black";
+        });
+        
+        dustbin.addEventListener("drop", (event) => {
+            event.preventDefault();
+            let data = event.dataTransfer.getData("text");
+            let draggedItem = document.getElementById(data);
+            if (draggedItem) {
+                draggedItem.style.display = "none";
+                alert("Good job! You used the dustbin correctly!");
+            }
+            dustbin.style.borderColor = "black";
+        });
+    </script>
+</body>
+</html>

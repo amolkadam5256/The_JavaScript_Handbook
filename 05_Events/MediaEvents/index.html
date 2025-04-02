@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Media Events</title>
+</head>
+<body>
+
+    <video id="mediaVideo" width="500" controls autoplay muted>
+        <source src="./demomp3.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <p id="status">Status: Not playing</p>
+    <p>Buffering Status: <span id="bufferStatus">Waiting...</span></p>
+    <p>Current Time: <span id="currentTime">0</span> sec</p>
+    <p>Volume Level: <span id="volumeLevel">1</span></p>
+
+    <script>
+        const video = document.getElementById("mediaVideo");
+        const status = document.getElementById("status");
+        const bufferStatus = document.getElementById("bufferStatus");
+        const currentTimeDisplay = document.getElementById("currentTime");
+        const volumeLevel = document.getElementById("volumeLevel");
+
+        // Playback Events
+        video.addEventListener("play", () => status.textContent = "Status: Playing");
+        video.addEventListener("pause", () => status.textContent = "Status: Paused");
+        video.addEventListener("ended", () => status.textContent = "Status: Video Ended");
+        
+        // Buffering Events
+        video.addEventListener("waiting", () => bufferStatus.textContent = "Waiting for data...");
+        video.addEventListener("playing", () => bufferStatus.textContent = "Playing");
+        video.addEventListener("progress", () => bufferStatus.textContent = "Data is loading...");
+        video.addEventListener("canplaythrough", () => bufferStatus.textContent = "Can play without buffering");
+        
+        // Time Update Event
+        video.addEventListener("timeupdate", () => {
+            currentTimeDisplay.textContent = video.currentTime.toFixed(2);
+        });
+        
+        // Volume Change Event
+        video.addEventListener("volumechange", () => {
+            volumeLevel.textContent = video.volume.toFixed(2);
+        });
+    </script>
+
+</body>
+</html>
