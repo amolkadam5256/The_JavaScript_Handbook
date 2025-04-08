@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Key Detector Project</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 100px;
+    }
+    #keyDisplay {
+      font-size: 2rem;
+      color: #4caf50;
+      margin-top: 20px;
+      padding: 20px;
+      border: 2px dashed #4caf50;
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🔑 Press Any Key</h1>
+  <div id="keyDisplay">Your key will appear here</div>
+
+  <script>
+    const keyDisplay = document.getElementById("keyDisplay");
+
+    document.addEventListener("keydown", function(event) {
+      const keyName = event.key;
+      console.log("Key Pressed:", keyName); // console log
+
+      // Display on screen
+      keyDisplay.textContent = `You pressed: "${keyName}"`;
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setInterval in JS</title>
+</head>
+
+<body>
+
+    <h1>Chai with JavaScript ☕</h1>
+    <button id="start1">Start</button>
+    <button id="end1">End</button>
+
+    <script>
+        // Step 1: Get button elements
+        const startBtn = document.getElementById("start1");
+        const endBtn = document.getElementById("end1");
+
+        // Step 2: Function to be repeated
+        const saudata = (str) => {
+            console.log(str, Date.now());
+        }
+
+        // Step 3: Declare interval ID outside to access globally
+        let intervalId;
+
+        // Step 4: Start interval on start button click
+        startBtn.addEventListener("click", () => {
+            console.log("Started interval");
+            intervalId = setInterval(saudata, 1000, "Hi ☕");
+        });
+
+        // Step 5: Clear interval on end button click
+        endBtn.addEventListener("click", () => {
+            console.log("Stopped interval");
+            clearInterval(intervalId);
+        });
+
+
+        // requestAnimationFrame(function draw() {
+        //     console.log("Frame update");
+        //     requestAnimationFrame(draw);
+        // });
+    </script>
+</body>
+
+</html>

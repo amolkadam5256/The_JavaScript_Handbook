@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>async and wait</title>
+</head>
+
+<body>
+
+    <h1 id="h1text">Chai Or Code </h1>
+    <button id="stop">stop</button>
+
+    <script>
+
+        const h1text = function () {
+            document.getElementById("h1text").innerText = "Hello My Name is Amol";
+        }
+
+        setTimeout(h1text, 2000);
+        setTimeout(() => {
+            console.log("Hello My name is Amol")
+        }, 4000);
+
+
+        const sayamol = function () {
+            console.log("Hello Mu name is 2");
+        }
+
+        setTimeout(sayamol, 7000)
+
+
+        const stop2 = document.getElementById("stop");
+
+        stop2.addEventListener("click", function () {
+            console.log("Stop event call");
+        })
+
+        setTimeout(function () {
+            stop2.click();
+
+        }, 2000)
+
+
+
+    </script>
+</body>
+
+</html>

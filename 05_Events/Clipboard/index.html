@@ -5,6 +5,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clipboard Event in JS</title>
+    <style>
+        #dragBox {
+          width: 100px;
+          height: 100px;
+          background-color: #3498db;
+          color: white;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin: 20px;
+          cursor: grab;
+        }
+    
+        #dropZone {
+          width: 300px;
+          height: 150px;
+          border: 2px dashed #ccc;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin: 20px;
+        }
+    
+        #dropZone.hovered {
+          border-color: #2ecc71;
+          background-color: #ecf9f1;
+        }
+      </style>
+    
 </head>
 
 <body>
@@ -14,6 +43,12 @@
     <textarea name="textpara" id="textpara">
 
     </textarea>
+
+
+    <div>
+        <div id="dragBox" draggable="true">Drag me</div>
+        <div id="dropZone">Drop here</div>
+    </div>
 
     <script src="script.js"></script>
 </body>
