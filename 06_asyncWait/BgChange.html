@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Background Color Changer</title>
+    <style>
+        body {
+            text-align: center;
+            padding-top: 100px;
+            transition: background-color 0.5s ease; /* Smooth color change */
+            font-family: Arial, sans-serif;
+        }
+
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+        }
+
+        /* Start button styling */
+        #start {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        /* Stop button styling */
+        #stop {
+            background-color: #f44336;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>🎨 Random Background Color Changer</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+
+    <script>
+        // Store the interval ID for later clearing
+        let intervalId = null;
+
+        // Function to generate a random hex color
+        function getRandomHexColor() {
+            let color = "#";
+            for (let i = 0; i < 6; i++) {
+                // Generate a random number between 0–15 and convert it to hexadecimal
+                color += Math.floor(Math.random() * 16).toString(16);
+            }
+            return color;
+        }
+
+        // Start button click: begin changing background color every second
+        document.getElementById("start").addEventListener("click", () => {
+            if (!intervalId) { // Prevent multiple intervals
+                intervalId = setInterval(() => {
+                    document.body.style.backgroundColor = getRandomHexColor();
+                    let h1 = document.getElementsByTagName("h1")[0];
+                    h1.style.color = getRandomHexColor();
+                }, 1000); // Change color every 1 second
+            }
+        });
+
+        // Stop button click: stop the color change
+        document.getElementById("stop").addEventListener("click", () => {
+            clearInterval(intervalId); // Stop interval
+            intervalId = null; // Reset intervalId
+        });
+    </script>
+
+</body>
+
+</html>
