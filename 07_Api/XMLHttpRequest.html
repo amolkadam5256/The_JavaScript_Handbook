@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>XMLHttpRequest Example</title>
+</head>
+
+<body>
+
+    <h2>Users List</h2>
+    <ul id="userList"></ul>
+
+    <script>
+        // Step 1: Create a new XMLHttpRequest object
+
+        const RequestUrl = 'https://jsonplaceholder.typicode.com/users';
+        var xhr = new XMLHttpRequest(); // This creates the request object we use to communicate with the server
+
+        // Step 2: Configure the request
+        // open(method, url, async)
+        xhr.open('GET', RequestUrl, true);
+        // We are making a GET request to fetch data from the given API URL
+        // 'true' means the request is asynchronous (non-blocking)
+
+        // Step 3: Set up what to do when the response is received
+        xhr.onload = function () {
+            // Check if the status is OK (200)
+            if (xhr.status === 200) {
+                // Step 4: Parse the response JSON string into JavaScript object
+                var users = JSON.parse(xhr.responseText);
+
+                // Step 5: Display the data dynamically in the browser
+                var output = '';
+                users.forEach(function (user) {
+                    // For each user, we create a list item with name and email
+                    output += `<li>${user.name} (${user.email})</li>`;
+                });
+
+                // Insert the generated HTML list into the <ul> element with id="userList"
+                document.getElementById('userList').innerHTML = output;
+
+            } else {
+                // If the status is not 200, something went wrong
+                console.log('Error fetching users:', xhr.status);
+            }
+        };
+
+        // Step 6: Send the request to the server
+        xhr.send(); // This actually sends the request
+
+    </script>
+
+</body>
+
+</html>

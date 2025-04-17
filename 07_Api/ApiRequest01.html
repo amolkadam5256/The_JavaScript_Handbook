@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Advanced API Request</title>
+</head>
+<body>
+
+  <h1>Product List</h1>
+  <ul id="product-list"></ul>
+
+  <script>
+    /**
+     * 📝 NOTE:
+     * This is a 'GET' request to a RESTful API.
+     * 
+     * API Type: Public REST API (DummyJSON)
+     * Endpoint: https://dummyjson.com/products
+     * Purpose: To fetch a list of fake product data (used for testing and learning)
+     * Method: GET - retrieves data from the server
+     */
+
+    // Start the fetch request
+    fetch('https://dummyjson.com/products', {
+      method: 'GET'  // You can change to POST, PUT, DELETE depending on the action
+    })
+    .then(response => {
+      // Check if the response is successful
+      if (!response.ok) {
+        throw new Error("Network response was not ok: " + response.statusText);
+      }
+      // Parse response body as JSON
+      console.log(response.status)
+      console.log(response.ok)
+      return response.json();
+    })
+    .then(data => {
+      console.log("Fetched Data:", data); // Log full product data in console
+
+      // Get the UL element where we'll add products
+      const productList = document.getElementById('product-list');
+
+      // Loop through the first 10 products and display them
+      data.products.slice(0, 30).forEach(product => {
+        const li = document.createElement('li');
+        li.textContent = `${product.title} - $${product.price}- ${product.images}`;
+        productList.appendChild(li); // Add product to the list
+      });
+    })
+    .catch(error => {
+      // If there's an error (like network failure), log it
+      console.error("Error fetching data:", error);
+    });
+
+    
+  </script>
+
+</body>
+</html>

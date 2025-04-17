@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch and Display Users</title>
+</head>
+
+<body>
+
+<h1>Hello</h1>
+
+    <script>
+        fetch('https://jsonplaceholder.typicode.com/users')
+            .then(res => {
+                if (!res.ok) {
+                    throw new Error("Network response was not ok");
+                }
+                return res.json();
+            })
+            .then((data) => {
+                document.write("<h1>Users Data</h1>");
+
+                for (let i = 0; i < data.length; i++) {
+                    document.write(`<h3>User ${i + 1}</h3>`);
+                    document.write(`<p><strong>ID:</strong> ${data[i].id}</p>`);
+                    document.write(`<p><strong>Name:</strong> ${data[i].name}</p>`);
+                    document.write(`<p><strong>Username:</strong> ${data[i].username}</p>`);
+                    document.write(`<p><strong>Email:</strong> ${data[i].email}</p>`);
+                    document.write(`<p><strong>Address:</strong> ${data[i].address.street}, ${data[i].address.suite}, ${data[i].address.city} - ${data[i].address.zipcode}</p>`);
+                    document.write(`<p><strong>Geo Location:</strong> ${data[i].address.geo.lat}, ${data[i].address.geo.lng}</p>`);
+                    document.write(`<p><strong>Phone:</strong> ${data[i].phone}</p>`);
+                    document.write(`<p><strong>Website:</strong> ${data[i].website}</p>`);
+                    document.write(`<p><strong>Company:</strong> ${data[i].company.name} (${data[i].company.catchPhrase}) - ${data[i].company.bs}</p>`);
+                    document.write(`<hr>`);
+                }
+            })
+            .catch((error) => {
+                document.write(`<p style="color:red;">Error is: ${error}</p>`);
+            });
+    </script>
+
+</body>
+
+</html>
