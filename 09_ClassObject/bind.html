@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bind in js </title>
+</head>
+<body>
+    
+    <!-- Button element which will trigger the event -->
+    <button> Button Click</button>
+
+    <script>
+        // Define the React class (not related to actual React library, just an example)
+        class React {
+
+            // Constructor to initialize properties
+            constructor(){
+                // Define the properties of the class
+                this.libary = "React";  // This is the name of the library
+                this.server = "htttps://localhost:300";  // This is the server URL
+
+                // Recuriment: Add event listener for button click
+                // 'this' inside handlClick refers to the instance of this class
+                document.querySelector('button')
+                    .addEventListener("click", this.handlClick.bind(this));  // Using .bind(this) to preserve the correct context of 'this'
+            }
+
+            // Method to handle the button click
+            handlClick(){
+                // Display a message when the button is clicked
+                console.log("Btn Click");
+
+                // Display the server URL (this refers to the current instance of the class React)
+                console.log(`this is server ${this.server}`);
+
+                // Display the entire instance of React class
+                console.log(`this is server ${this}`);
+            }
+        }
+
+        // Create a new instance of the React class
+        // This triggers the constructor and sets up the event listener
+        const app = new React();
+    </script>
+</body>
+</html>
